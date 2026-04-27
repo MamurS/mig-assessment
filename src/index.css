@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-feature-settings: 'ss01' on, 'cv11' on;
+  }
+  body {
+    @apply font-sans antialiased;
+    background-image:
+      radial-gradient(at 20% 0%, rgba(31, 56, 100, 0.04) 0%, transparent 40%),
+      radial-gradient(at 100% 100%, rgba(31, 56, 100, 0.03) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+  h1, h2, h3 {
+    @apply font-display;
+    letter-spacing: -0.015em;
+  }
+  /* Hide focus ring for mouse users; keep for keyboard */
+  :focus { outline: none; }
+  :focus-visible {
+    @apply ring-2 ring-accent-500/40 ring-offset-2 ring-offset-sand-50 rounded;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white rounded-lg shadow-soft border border-ink-100;
+  }
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md font-medium
+           transition-all duration-150 select-none;
+  }
+  .btn-primary {
+    @apply btn bg-accent-500 text-white hover:bg-accent-600 active:bg-accent-700
+           disabled:bg-ink-300 disabled:cursor-not-allowed;
+  }
+  .btn-ghost {
+    @apply btn bg-transparent text-ink-700 hover:bg-ink-100 disabled:text-ink-400 disabled:cursor-not-allowed;
+  }
+  .btn-outline {
+    @apply btn bg-white text-ink-800 border border-ink-200 hover:bg-ink-50;
+  }
+  .input {
+    @apply w-full px-3.5 py-2.5 rounded-md border border-ink-200 bg-white
+           text-ink-900 placeholder-ink-400
+           focus:border-accent-500 focus:ring-2 focus:ring-accent-500/15
+           transition-colors;
+  }
+  .label {
+    @apply block text-sm font-medium text-ink-700 mb-1.5;
+  }
+  .chip {
+    @apply inline-flex items-center px-2 py-0.5 rounded text-xs font-medium;
+  }
+}
+
+/* Print styles for the assessment report */
+@media print {
+  body { background: white !important; }
+  .no-print { display: none !important; }
+  .print-break { page-break-before: always; }
+  .card { box-shadow: none !important; border: 1px solid #ccc !important; }
+}
