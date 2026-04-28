@@ -22,10 +22,6 @@ export default function LandingPage() {
 
     setBusy(true);
     try {
-      // Check for existing submitted attempt (one-attempt-per-email rule)
-      // We can't read attempts as anon, so we let the server-side check happen
-      // via a Pages Function for accuracy. Client-side, we just create the attempt
-      // and let the function reject if needed.
       const res = await fetch('/api/start-attempt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -48,7 +44,6 @@ export default function LandingPage() {
       }
       const ok = data as { attemptId: string; startedAt: string; questionOrder: string[] };
 
-      // Persist attempt id and lang in sessionStorage so refresh works
       sessionStorage.setItem(`attempt-${ok.attemptId}`, JSON.stringify({
         lang,
         startedAt: ok.startedAt,
@@ -69,7 +64,6 @@ export default function LandingPage() {
       <BrandHeader />
       <main className="flex-1 flex items-center justify-center p-6">
         <div className="card w-full max-w-2xl p-10">
-          {/* Decorative header band */}
           <div className="flex items-center gap-3 mb-8">
             <div className="h-px flex-1 bg-gradient-to-r from-transparent to-accent-500/30" />
             <div className="text-[10px] uppercase tracking-[0.25em] text-accent-500 font-medium">
@@ -143,20 +137,3 @@ export default function LandingPage() {
           </div>
 
           <div className="mt-8 pt-6 border-t border-ink-100 text-center">
-            <p className="text-xs text-ink-400">
-              {t.org} · {TEST_DURATION_MINUTES} minutes · 100 points
-            </p>
-            <p className="mt-3">
-              
-                href="/admin/login"
-                className="text-[11px] text-ink-300 hover:text-accent-500 transition-colors uppercase tracking-wider"
-              >
-                Admin
-              </a>
-            </p>
-          </div>
-        </div>
-      </main>
-    </div>
-  );
-}
