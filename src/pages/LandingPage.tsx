@@ -86,12 +86,7 @@ export default function LandingPage() {
                     key={l.value}
                     type="button"
                     onClick={() => setLang(l.value)}
-                    className={`
-                      flex-1 px-4 py-2.5 rounded-md border text-sm font-medium transition-all
-                      ${lang === l.value
-                        ? 'border-accent-500 bg-accent-50 text-accent-600'
-                        : 'border-ink-200 bg-white text-ink-700 hover:border-ink-300'}
-                    `}
+                    className={`flex-1 px-4 py-2.5 rounded-md border text-sm font-medium transition-all ${lang === l.value ? 'border-accent-500 bg-accent-50 text-accent-600' : 'border-ink-200 bg-white text-ink-700 hover:border-ink-300'}`}
                   >
                     {l.label}
                   </button>
