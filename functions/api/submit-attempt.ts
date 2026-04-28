@@ -99,8 +99,8 @@ Respond ONLY with a single JSON object, no prose, no markdown, no code fences:
         'content-type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'claude-sonnet-4-5',
-        max_tokens: 800,
+        model: 'claude-sonnet-4-5-20250929',
+        max_tokens: 1024,
         temperature: 0.2,
         messages: [{ role: 'user', content: prompt }],
       }),
@@ -109,7 +109,7 @@ Respond ONLY with a single JSON object, no prose, no markdown, no code fences:
     if (!res.ok) {
       const txt = await res.text();
       console.error('Anthropic API error:', res.status, txt);
-      return { points: 0, feedback: '[Auto-grading failed — please grade manually]' };
+      return { points: 0, feedback: `[Auto-grading failed: ${res.status} — ${txt.slice(0, 200)}]` };
     }
 
     const data = await res.json() as { content?: Array<{ type: string; text?: string }> };
