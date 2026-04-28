@@ -91,7 +91,7 @@ Respond ONLY with a single JSON object, no prose, no markdown, no code fences:
 {"points": <number>, "feedback": "<string>"}`;
 
   try {
-    const res = await fetch('https://gateway.ai.cloudflare.com/v1/8c3ca6927707ade25ff2412c2368fee4/mig-grading-1/compat/chat/completions', {
+    const res = await fetch('https://gateway.ai.cloudflare.com/v1/8c3ca6927707ade25ff2412c2368fee4/mig-grading-1/anthropic/v1/messages', {
       method: 'POST',
       headers: {
         'x-api-key': env.ANTHROPIC_API_KEY,
