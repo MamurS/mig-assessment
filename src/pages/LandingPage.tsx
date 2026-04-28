@@ -146,6 +146,14 @@ export default function LandingPage() {
             <p className="text-xs text-ink-400">
               {t.org} · {TEST_DURATION_MINUTES} minutes · 100 points
             </p>
+            <p className="mt-3">
+              
+                href="/admin/login"
+                className="text-[11px] text-ink-300 hover:text-accent-500 transition-colors uppercase tracking-wider"
+              >
+                Admin
+              </a>
+            </p>
           </div>
         </div>
       </main>
