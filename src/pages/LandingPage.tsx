@@ -16,7 +16,6 @@ export default function LandingPage() {
 
   async function handleStart() {
     setErr(null);
-
     if (!name.trim()) return setErr(t.ui.required);
     if (!isValidEmail(email)) return setErr(t.ui.invalid_email);
 
@@ -135,14 +134,13 @@ export default function LandingPage() {
             <p className="text-xs text-ink-400">
               {t.org} · {TEST_DURATION_MINUTES} minutes · 100 points
             </p>
-            <p className="mt-3">
-              
-                href="/admin/login"
-                className="text-[11px] text-ink-300 hover:text-accent-500 transition-colors uppercase tracking-wider"
-              <a>
-                Admin
-              </a>
-            </p>
+            <button
+              type="button"
+              onClick={() => navigate('/admin/login')}
+              className="mt-3 text-[11px] text-ink-300 hover:text-accent-500 transition-colors uppercase tracking-wider bg-transparent border-0 cursor-pointer"
+            >
+              Admin
+            </button>
           </div>
         </div>
       </main>
