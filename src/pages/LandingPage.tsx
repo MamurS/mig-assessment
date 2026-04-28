@@ -139,7 +139,7 @@ export default function LandingPage() {
               
                 href="/admin/login"
                 className="text-[11px] text-ink-300 hover:text-accent-500 transition-colors uppercase tracking-wider"
-              >
+              <a>
                 Admin
               </a>
             </p>
