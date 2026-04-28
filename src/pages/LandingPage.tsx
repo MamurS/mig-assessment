@@ -137,7 +137,7 @@ export default function LandingPage() {
             <button
               type="button"
               onClick={() => navigate('/admin/login')}
-              className="mt-3 text-[11px] text-ink-300 hover:text-accent-500 transition-colors uppercase tracking-wider bg-transparent border-0 cursor-pointer"
+              className="mt-3 text-sm text-accent-500 hover:text-accent-700 hover:underline transition-colors font-medium bg-transparent border-0 cursor-pointer"
             >
               Admin
             </button>
