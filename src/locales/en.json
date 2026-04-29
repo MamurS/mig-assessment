@@ -5,10 +5,10 @@
   "org": "Mosaic Insurance Group JSC",
   "instructions": "Time limit: 90 minutes. Total: 100 points. Calculators allowed; no internet, no notes. For multiple-choice questions, select one (or two where indicated) answer. For open-ended questions, write your reasoning clearly — partial credit is awarded for correct logic even if the final number is off.",
   "partLabels": {
-    "I": "Part I — Logical Reasoning (15 points)",
-    "II": "Part II — Insurance & Reinsurance Principles (30 points)",
-    "III": "Part III — Uzbekistan Market & Legislation (20 points)",
-    "IV": "Part IV — International Underwriting Cases (35 points)"
+    "I": "Part I — Logical Reasoning (18 points)",
+    "II": "Part II — Insurance & Reinsurance Principles (36 points)",
+    "III": "Part III — Uzbekistan Market & Legislation (24 points)",
+    "IV": "Part IV — International Underwriting Cases (22 points)"
   },
   "ui": {
     "candidate_name": "Full name",
@@ -34,7 +34,7 @@
   },
   "questions": [
     {
-      "id": "q1", "number": 1, "type": "mcq_single", "points": 5, "part": "I",
+      "id": "q1", "number": 1, "type": "mcq_single", "points": 6, "part": "I",
       "text": "All certified surveyors are authorised to sign loss reports. Some authorised signatories are not employed by the insurer. No external consultant is employed by the insurer. Which conclusion MUST be true?",
       "options": [
         { "letter": "A", "text": "All certified surveyors are external consultants." },
@@ -45,7 +45,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q2", "number": 2, "type": "mcq_single", "points": 5, "part": "I",
+      "id": "q2", "number": 2, "type": "mcq_single", "points": 6, "part": "I",
       "text": "Four claims — A, B, C, D — must be processed in some order under these rules: (i) B is processed before D. (ii) A is processed immediately after C. (iii) D is not last. Which order is possible?",
       "options": [
         { "letter": "A", "text": "B, C, A, D" },
@@ -56,7 +56,7 @@
       "correct": ["C"]
     },
     {
-      "id": "q3", "number": 3, "type": "mcq_single", "points": 5, "part": "I",
+      "id": "q3", "number": 3, "type": "mcq_single", "points": 6, "part": "I",
       "text": "A reinsurer accepts a risk only if BOTH the 5-year loss ratio is below 60% AND the cedent's rating is A- or higher. A submission shows: 5-year loss ratio = 45%, cedent rating = BBB+. Which statement is logically correct?",
       "options": [
         { "letter": "A", "text": "The risk will be accepted, because the loss ratio condition is met." },
@@ -67,7 +67,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q4", "number": 4, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q4", "number": 4, "type": "mcq_single", "points": 6, "part": "II",
       "text": "Which of the following best defines a \"deductible\" in a property policy?",
       "options": [
         { "letter": "A", "text": "The maximum amount the insurer will pay for any one loss." },
@@ -78,7 +78,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q5", "number": 5, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q5", "number": 5, "type": "mcq_single", "points": 6, "part": "II",
       "text": "A treaty under which the reinsurer pays a fixed share of every loss above a per-risk attachment point, up to a contractual limit, is called:",
       "options": [
         { "letter": "A", "text": "Quota Share treaty" },
@@ -89,7 +89,7 @@
       "correct": ["C"]
     },
     {
-      "id": "q6", "number": 6, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q6", "number": 6, "type": "mcq_single", "points": 6, "part": "II",
       "text": "The principle of \"utmost good faith\" (uberrimae fidei) requires that:",
       "options": [
         { "letter": "A", "text": "The insurer must pay every claim regardless of policy terms." },
@@ -100,7 +100,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q7", "number": 7, "type": "mcq_multi", "points": 5, "part": "II",
+      "id": "q7", "number": 7, "type": "mcq_multi", "points": 6, "part": "II",
       "text": "Which TWO of the following are forms of proportional reinsurance? (Select two.)",
       "options": [
         { "letter": "A", "text": "Quota Share" },
@@ -111,7 +111,7 @@
       "correct": ["A", "C"]
     },
     {
-      "id": "q8", "number": 8, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q8", "number": 8, "type": "mcq_single", "points": 6, "part": "II",
       "text": "Subrogation is the right of:",
       "options": [
         { "letter": "A", "text": "The insured to claim from multiple insurers for the same loss." },
@@ -122,7 +122,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q9", "number": 9, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q9", "number": 9, "type": "mcq_single", "points": 6, "part": "II",
       "text": "A self-insured retention (SIR) differs from a deductible primarily because:",
       "options": [
         { "letter": "A", "text": "A deductible is always larger than an SIR." },
@@ -133,7 +133,7 @@
       "correct": ["C"]
     },
     {
-      "id": "q10", "number": 10, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q10", "number": 10, "type": "mcq_single", "points": 6, "part": "III",
       "text": "Under the Law of the Republic of Uzbekistan \"On Insurance Activity\", an insurer's maximum retention on a single risk is generally limited to:",
       "options": [
         { "letter": "A", "text": "5% of the insurer's paid-in charter capital" },
@@ -144,7 +144,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q11", "number": 11, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q11", "number": 11, "type": "mcq_single", "points": 6, "part": "III",
       "text": "Which Uzbek state body is the primary regulator of the insurance market and supervises solvency, licensing, and market conduct?",
       "options": [
         { "letter": "A", "text": "Central Bank of the Republic of Uzbekistan (CBU)" },
@@ -155,7 +155,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q12", "number": 12, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q12", "number": 12, "type": "mcq_single", "points": 6, "part": "III",
       "text": "Which line of insurance is COMPULSORY for legal entities operating hazardous production facilities in Uzbekistan?",
       "options": [
         { "letter": "A", "text": "Directors & Officers Liability (D&O)" },
@@ -166,7 +166,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q13", "number": 13, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q13", "number": 13, "type": "mcq_single", "points": 6, "part": "III",
       "text": "For a property risk where the sum insured exceeds the insurer's maximum retention, the underwriter must:",
       "options": [
         { "letter": "A", "text": "Decline the risk outright." },
@@ -178,28 +178,18 @@
     },
     {
       "id": "q14", "number": 14, "type": "open", "points": 9, "part": "IV",
-      "text": "CASE A — PROPERTY (MENA). A broker offers facultative reinsurance on a textile mill in Alexandria, Egypt. Total Sum Insured (PD + BI) = USD 120,000,000, EML = 40%, deductible USD 250,000 each and every loss, rate offered 0.22% on TSI. The cedent retains 30% net and is placing 70% facultative. Your maximum line per risk is USD 1,000,000 (100%). (a) Calculate the EML in USD. (b) What participation share (in %) of the 70% placement would you write to fully use your line — show the math. (c) Name TWO additional pieces of information you would request before quoting (beyond the slip).",
-      "rubric": "Full marks (9 pts) require all three parts answered. (a) EML = 40% × $120M = $48,000,000 (3 pts). (b) Line = $1M; placement is 70% of TSI = $84M, but the EML basis is more relevant — line as % of $84M = 1.19%, OR if line is computed against EML 70% × $48M = $33.6M then 1M/33.6M ≈ 2.98%. Award full marks for either interpretation if math is shown. (3 pts) (c) Examples of acceptable info requests: COPE (construction/occupancy/protection/exposure), 5-10 year loss history, fire protection (sprinklers/hydrants/fire brigade distance), separation between buildings, BI methodology and indemnity period, prior surveyor report, retention/treaty arrangements of cedent, neighboring exposures, business continuity plan, EML methodology used, presence of bonded warehouse / storage of finished goods. Need TWO sensible items (3 pts; 1.5 each)."
+      "text": "CASE A — PROPERTY (MENA). A textile mill in Alexandria, Egypt. Total Sum Insured = USD 120,000,000, EML = 40% of TSI. Please answer the three parts below:\n\n(a) Calculate the EML in USD. Show the calculation. (3 pts)\n\n(b) The insurer's maximum line per risk is USD 1,000,000. The cedent is placing 70% of the risk on the facultative market. What percentage share of that 70% placement should the insurer take in order to fully use its USD 1,000,000 line? Show the calculation. Hint: line ÷ (70% of TSI) × 100. (3 pts)\n\n(c) Beyond the slip itself, name TWO additional pieces of information you would request from the broker before quoting. Examples to consider: loss history, fire protection details, building separation, BI methodology, surveyor reports, neighbouring exposures. Pick any two and briefly state why each matters. (3 pts)",
+      "rubric": "Full marks (9 pts). (a) EML = 40% × $120M = $48,000,000 (3 pts; 1 pt for correct method even if arithmetic wrong). (b) Line / (70% of TSI) = 1,000,000 / 84,000,000 ≈ 1.19%. Award full 3 pts for that calculation. Also accept 1M / (70% × EML) = 1M / 33.6M ≈ 2.98% if reasoning is shown. 1 pt for correct setup with arithmetic error. (c) Acceptable items: COPE info (construction/occupancy/protection/exposure), 5-10 yr loss history, fire protection (sprinklers/hydrants/distance to brigade), separation between buildings, BI methodology and indemnity period, surveyor report, cedent's retention/treaty arrangements, neighbouring exposures, BCP, EML methodology. TWO sensible items with brief justification = 3 pts (1.5 each)."
     },
     {
       "id": "q15", "number": 15, "type": "open", "points": 9, "part": "IV",
-      "text": "CASE B — CONSTRUCTION (SE ASIA). A 28-month CAR + EAR submission for a 450 MW gas-fired power plant in Vietnam, project value USD 480 million. The site is 8 km from the coast in a typhoon-exposed zone. Cedent requests USD 500,000 fac share on a quota share basis of the master CAR placement. Identify FOUR distinct underwriting concerns specific to this risk (do not just list \"natural perils\" — be specific) and state for each whether it could be addressed by a sub-limit, deductible, exclusion, warranty, or premium loading.",
-      "rubric": "Full marks (9 pts) require FOUR specific concerns with mitigant. ~2.25 pts each. Acceptable concerns include: (1) Typhoon/windstorm exposure 8km from coast → CAT sub-limit + windstorm deductible (e.g. % of project value) + warranty on cyclone preparedness; (2) Storm surge/flood given coastal proximity → flood sub-limit, separate flood deductible; (3) Testing & commissioning phase risk for gas turbine (high-value, complex, prone to losses) → T&C sub-limit, separate higher deductible during T&C, possibly LEG2 or LEG3 defects clause loading; (4) Maintenance period extension and liability for defective workmanship → Maintenance period limited to 12 months, DE clause discussion; (5) Hot work / welding fire risk during erection → hot work warranty; (6) Crane operations / lifting heavy components (turbine, generator) → lifting warranty, sub-limit for transit-to-site, named perils for heavy lift; (7) Currency volatility on USD-denominated EPC contract — premium loading or escalation clause; (8) Subcontractor quality / Vietnamese local construction standards — surveyor warranty, project manager qualifications. Reject vague answers like 'weather' or 'workers'. Each concern must be paired with a specific mitigant from the listed types."
+      "text": "CASE B — CONSTRUCTION (SE Asia). A 28-month CAR + EAR submission for a 450 MW gas-fired power plant in Vietnam, project value USD 480 million. The site is 8 km from the coast in a typhoon-exposed zone.\n\nIdentify THREE specific underwriting concerns for this risk and state how each could be addressed. Use any THREE of the categories below as inspiration:\n\n• Natural perils (typhoon, storm surge, flood)\n• Testing & commissioning of the gas turbine\n• Heavy lifts (turbine, generator)\n• Hot work / welding during erection\n• Local subcontractor quality\n\nFor each concern, name a specific mitigant from this list: sub-limit, deductible, exclusion, warranty, or premium loading. Be concrete — avoid vague answers like \"weather\" or \"safety\".",
+      "rubric": "Full marks (9 pts; 3 per concern). Each concern must be (1) specific to the risk and (2) paired with one mitigant type. Acceptable: (1) Typhoon/windstorm at 8km coast → CAT sub-limit + windstorm % deductible + cyclone-preparedness warranty; (2) Storm surge / flood given coastal proximity → flood sub-limit, separate flood deductible; (3) Testing & commissioning of gas turbine → T&C sub-limit, higher T&C deductible, LEG2/LEG3 defects clause; (4) Heavy lifts → lifting warranty, transit-to-site sub-limit, named perils for heavy lift; (5) Hot work → hot work warranty; (6) Subcontractor quality / Vietnamese local construction standards → surveyor warranty, PM qualifications. Reject vague answers like 'weather', 'workers'. Each concern without a specific mitigant loses ~half its marks."
     },
     {
-      "id": "q16", "number": 16, "type": "open", "points": 8, "part": "IV",
-      "text": "CASE C — CARGO. A European chemical trader insures shipments of specialty resins from Rotterdam to Houston under an open cover. One conveyance is declared at USD 4.2 million on Institute Cargo Clauses (A), with the additional Institute War Clauses and Strikes Clauses. The vessel is 22 years old and the voyage is via the North Atlantic in February. (a) Briefly explain the difference in coverage between ICC (A) and ICC (C). (b) State TWO concerns you would raise with the broker about this specific declaration and what mitigants you would propose.",
-      "rubric": "Full marks (8 pts). (a) ICC (A) is all-risks coverage subject to listed exclusions; ICC (C) is named-perils only (fire, vessel sinking/grounding/stranding/capsizing, collision, general average sacrifice, jettison, discharge at port of distress) — much narrower; ICC (B) sits between. (4 pts) (b) Concerns + mitigants — TWO needed. Acceptable: (i) Vessel age 22 years > 15-year industry threshold → request Classification Society confirmation, IUMI age allowance / Vessel Age clause loading, or decline; (ii) North Atlantic in February — heavy weather season → check sea-worthiness, packaging adequacy for chemicals, lashing certificates, weather routing; (iii) Specialty resins may have temperature-sensitive properties → check stowage/temperature requirements, separate exclusion for inherent vice; (iv) Single conveyance limit of USD 4.2M may exceed open cover sub-limit per bottom — check accumulation; (v) Houston is hurricane-zone discharge port (less in Feb but still) — minor. (4 pts; 2 each) Award partial credit for correct concept even if mitigant is generic."
-    },
-    {
-      "id": "q17", "number": 17, "type": "open", "points": 6, "part": "IV",
-      "text": "CASE D — PROPERTY (US). A facultative submission arrives for a portfolio of 14 commercial buildings in Florida, total TSI USD 95 million, of which 60% is concentrated in two coastal counties. Wind deductible offered: 2% of TSI per location, AOP deductible USD 25,000. Modeled 1-in-100 hurricane PML = 9% of TSI. Premium offered: USD 380,000 (100%). Would you (i) decline, (ii) accept with conditions, or (iii) accept as offered? Give THREE specific reasons supporting your decision, referencing the figures provided.",
-      "rubric": "Full marks (6 pts). The defensible answer is DECLINE or ACCEPT WITH CONDITIONS. Strong candidates note: (1) Premium = $380K = 0.40% rate on TSI; PML = $8.55M (9% × $95M); rate on PML = ~4.4% — borderline thin for cat-exposed Florida wind; (2) 60% concentration in two coastal counties = severe accumulation issue, not diversified portfolio; (3) Wind deductible 2% per LOCATION (not per occurrence) is candidate's friend, but per-location instead of aggregated may still leave layered exposure; (4) Florida = hurricane belt; PML modeling assumptions need verification (which model? RMS, AIR? Vintage? Demand surge included?); (5) Limit needed is per-risk and CAT — does cedent have CAT XL? (6) AOP deductible $25K is low for commercial — non-cat losses may erode results. Three reasons with figures = 6 pts; vague reasons without numbers = max 3 pts. Either decline or accept-with-conditions (cat sub-limits, named windstorm exclusion, higher deductible, rate increase) is acceptable; 'accept as offered' should lose at least 2 pts unless heavily justified."
-    },
-    {
-      "id": "q18", "number": 18, "type": "open", "points": 3, "part": "IV",
-      "text": "In one or two sentences each, explain the difference between: (a) PML and EML; (b) facultative and treaty reinsurance; (c) coinsurance clause and average clause.",
-      "rubric": "Full marks (3 pts; 1 per pair). (a) PML (Probable Maximum Loss) = the largest loss reasonably expected from a single event under typical safeguards working; EML (Estimated Maximum Loss) = a more conservative figure assuming some safeguards fail. PML ≤ EML in most underwriter usage, though usage varies by market. (b) Facultative reinsurance is risk-by-risk, individually negotiated and underwritten; treaty reinsurance is automatic, covers all risks falling within agreed parameters under a single contract. (c) Coinsurance clause requires the insured to insure a stated % of value (e.g. 80%) and applies a penalty proportional to under-insurance; average clause (UK term, similar concept) reduces claim payment proportionally to the ratio insured-value / actual-value when underinsured. They are very similar in effect; coinsurance is the US term, average is the UK/CIS term."
+      "id": "q18", "number": 16, "type": "open", "points": 4, "part": "IV",
+      "text": "In one or two sentences each, explain the difference between:\n\n(a) PML (Probable Maximum Loss) and EML (Estimated Maximum Loss)\n\n(b) Facultative reinsurance and Treaty reinsurance\n\n(c) Coinsurance clause and Average clause",
+      "rubric": "Full marks (4 pts). (a) PML = largest loss reasonably expected with safeguards working; EML = more conservative figure assuming some safeguards fail. PML ≤ EML in most usage (1.5 pts). (b) Facultative = risk-by-risk individually negotiated; treaty = automatic, all risks within agreed parameters under one contract (1.5 pts). (c) Coinsurance (US) and average clause (UK/CIS) similar in effect: when underinsured, claim payment reduced proportionally to ratio insured-value / actual-value (1 pt)."
     }
   ]
 }
