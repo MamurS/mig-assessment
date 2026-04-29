@@ -5,10 +5,10 @@
   "org": "«Mosaic Insurance Group» AJ",
   "instructions": "Vaqt: 90 daqiqa. Jami: 100 ball. Kalkulyator ruxsat etiladi; internet va materiallar — ta'qiqlanadi. Tanlovli savollarda bitta (yoki ko'rsatilgan joyda ikkita) javobni tanlang. Ochiq savollarda fikrlash jarayonini aniq yozing — yakuniy raqam noto'g'ri bo'lsa ham, to'g'ri mantiq uchun qisman ball beriladi.",
   "partLabels": {
-    "I": "I qism — Mantiqiy fikrlash (15 ball)",
-    "II": "II qism — Sug'urta va qayta sug'urta tamoyillari (30 ball)",
-    "III": "III qism — O'zbekiston bozori va qonunchiligi (20 ball)",
-    "IV": "IV qism — Xalqaro anderrayting keyslari (35 ball)"
+    "I": "I qism — Mantiqiy fikrlash (18 ball)",
+    "II": "II qism — Sug'urta va qayta sug'urta tamoyillari (36 ball)",
+    "III": "III qism — O'zbekiston bozori va qonunchiligi (24 ball)",
+    "IV": "IV qism — Xalqaro anderrayting keyslari (22 ball)"
   },
   "ui": {
     "candidate_name": "F.I.O.",
@@ -34,7 +34,7 @@
   },
   "questions": [
     {
-      "id": "q1", "number": 1, "type": "mcq_single", "points": 5, "part": "I",
+      "id": "q1", "number": 1, "type": "mcq_single", "points": 6, "part": "I",
       "text": "Barcha sertifikatlangan syurveyerlar zarar dalolatnomalarini imzolash huquqiga ega. Imzolash huquqiga ega bo'lgan ba'zi shaxslar sug'urtalovchining xodimi emas. Hech bir tashqi maslahatchi sug'urtalovchining xodimi emas. Qaysi xulosa MAJBURIY ravishda to'g'ri?",
       "options": [
         { "letter": "A", "text": "Barcha sertifikatlangan syurveyerlar — tashqi maslahatchilar." },
@@ -45,7 +45,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q2", "number": 2, "type": "mcq_single", "points": 5, "part": "I",
+      "id": "q2", "number": 2, "type": "mcq_single", "points": 6, "part": "I",
       "text": "To'rtta da'vo — A, B, C, D — quyidagi shartlar bilan ma'lum tartibda ko'rib chiqilishi kerak: (i) B D dan oldin ko'rib chiqiladi; (ii) A C dan keyin darhol ko'rib chiqiladi; (iii) D oxirgi emas. Qaysi tartib mumkin?",
       "options": [
         { "letter": "A", "text": "B, C, A, D" },
@@ -56,7 +56,7 @@
       "correct": ["C"]
     },
     {
-      "id": "q3", "number": 3, "type": "mcq_single", "points": 5, "part": "I",
+      "id": "q3", "number": 3, "type": "mcq_single", "points": 6, "part": "I",
       "text": "Qayta sug'urtalovchi riskni faqat HAR IKKI shart bajarilganda qabul qiladi: 5 yillik zararlilik 60% dan past VA tsedent reytingi A- yoki undan yuqori. Arizada: 5 yillik zararlilik = 45%, tsedent reytingi = BBB+. Qaysi xulosa mantiqan to'g'ri?",
       "options": [
         { "letter": "A", "text": "Risk qabul qilinadi, chunki zararlilik sharti bajarilgan." },
@@ -67,7 +67,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q4", "number": 4, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q4", "number": 4, "type": "mcq_single", "points": 6, "part": "II",
       "text": "Mol-mulk sug'urtasi polisida «franshiza» (deductible) ni eng to'g'ri ta'riflaydigan javob:",
       "options": [
         { "letter": "A", "text": "Sug'urtalovchi bitta zarar bo'yicha to'laydigan maksimal summa." },
@@ -78,7 +78,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q5", "number": 5, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q5", "number": 5, "type": "mcq_single", "points": 6, "part": "II",
       "text": "Qayta sug'urtalovchi har bir zararning belgilangan ulushini risk bo'yicha biriktirish nuqtasidan yuqorida shartnoma limitigacha to'laydigan shartnoma:",
       "options": [
         { "letter": "A", "text": "Kvota shartnomasi (Quota Share)" },
@@ -89,7 +89,7 @@
       "correct": ["C"]
     },
     {
-      "id": "q6", "number": 6, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q6", "number": 6, "type": "mcq_single", "points": 6, "part": "II",
       "text": "«Eng yuqori vijdonlilik» (uberrimae fidei) tamoyili shuni talab qiladi:",
       "options": [
         { "letter": "A", "text": "Sug'urtalovchi har qanday zararni polis shartlaridan qat'i nazar to'lashi kerak." },
@@ -100,7 +100,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q7", "number": 7, "type": "mcq_multi", "points": 5, "part": "II",
+      "id": "q7", "number": 7, "type": "mcq_multi", "points": 6, "part": "II",
       "text": "Quyidagilardan IKKItasi proportsional qayta sug'urta shaklidir? (Ikkita javobni tanlang.)",
       "options": [
         { "letter": "A", "text": "Quota Share" },
@@ -111,7 +111,7 @@
       "correct": ["A", "C"]
     },
     {
-      "id": "q8", "number": 8, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q8", "number": 8, "type": "mcq_single", "points": 6, "part": "II",
       "text": "Subrogatsiya — bu quyidagi huquq:",
       "options": [
         { "letter": "A", "text": "Sug'urtalanuvchining bir zarar bo'yicha bir nechta sug'urtalovchidan tovon olish huquqi." },
@@ -122,7 +122,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q9", "number": 9, "type": "mcq_single", "points": 5, "part": "II",
+      "id": "q9", "number": 9, "type": "mcq_single", "points": 6, "part": "II",
       "text": "O'z-o'zini sug'urtalash chegarasi (SIR) franshizadan asosan shu bilan farqlanadi:",
       "options": [
         { "letter": "A", "text": "Franshiza har doim SIR dan kattaroq bo'ladi." },
@@ -133,7 +133,7 @@
       "correct": ["C"]
     },
     {
-      "id": "q10", "number": 10, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q10", "number": 10, "type": "mcq_single", "points": 6, "part": "III",
       "text": "O'zbekiston Respublikasining «Sug'urta faoliyati to'g'risida»gi qonuniga muvofiq, sug'urtalovchining bitta risk bo'yicha maksimal o'z ushlanmasi odatda quyidagicha cheklanadi:",
       "options": [
         { "letter": "A", "text": "Sug'urtalovchining to'langan ustav kapitalining 5%" },
@@ -144,7 +144,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q11", "number": 11, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q11", "number": 11, "type": "mcq_single", "points": 6, "part": "III",
       "text": "Qaysi davlat organi O'zbekiston sug'urta bozorining asosiy regulyatori bo'lib, to'lov qobiliyati, litsenziyalash va bozor xulq-atvori ustidan nazoratni amalga oshiradi?",
       "options": [
         { "letter": "A", "text": "O'zbekiston Respublikasi Markaziy banki (MB)" },
@@ -155,7 +155,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q12", "number": 12, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q12", "number": 12, "type": "mcq_single", "points": 6, "part": "III",
       "text": "O'zbekistonda xavfli ishlab chiqarish obyektlarini ekspluatatsiya qiluvchi yuridik shaxslar uchun qaysi sug'urta MAJBURIY?",
       "options": [
         { "letter": "A", "text": "Direktorlar va mansabdor shaxslar javobgarligi sug'urtasi (D&O)" },
@@ -166,7 +166,7 @@
       "correct": ["B"]
     },
     {
-      "id": "q13", "number": 13, "type": "mcq_single", "points": 5, "part": "III",
+      "id": "q13", "number": 13, "type": "mcq_single", "points": 6, "part": "III",
       "text": "Mol-mulk riski bo'yicha sug'urta summasi sug'urtalovchining maksimal ushlanmasidan oshganda, anderrayter quyidagilardan birini bajarishi shart:",
       "options": [
         { "letter": "A", "text": "Riskni butunlay rad etish." },
@@ -178,28 +178,18 @@
     },
     {
       "id": "q14", "number": 14, "type": "open", "points": 9, "part": "IV",
-      "text": "KEYS A — MOL-MULK (MENA). Broker Iskandariyadagi (Misr) to'qimachilik fabrikasi bo'yicha fakultativ qayta sug'urtani taklif etadi. Umumiy sug'urta summasi (PD + BI) = USD 120 000 000, EML = 40%, har bir zarar bo'yicha franshiza USD 250 000, mukofot stavkasi sug'urta summasidan 0,22%. Tsedent 30% nettoni o'zida ushlab, 70% ni fakultativ joylashtiradi. Sizning bir risk bo'yicha maksimal limitingiz — USD 1 000 000 (100%). (a) EML ni USD da hisoblang. (b) Limitingizni to'liq ishlatish uchun 70%-li joylashtirishdan qancha ulushni (% da) olish kerak? Hisobni ko'rsating. (c) Slipdan tashqari brokerga kotirovkadan oldin beradigan IKKIta qo'shimcha savolni nomlang.",
-      "rubric": "To'liq ball (9) — barcha uch qism. (a) EML = 40% × $120 mln = $48 000 000 (3 ball). (b) Limit = $1 mln; joylashtirish 70% × $120 mln = $84 mln → 1/84 ≈ 1,19%; yoki agar limit EML dan hisoblansa (70% × $48 mln = $33,6 mln) → 1/33,6 ≈ 2,98%. Hisobi ko'rsatilsa har ikki talqin uchun to'liq ball (3). (c) Maqbul so'rovlar: COPE (qurilish/foydalanish/himoya/ekspozitsiya), 5–10 yillik zararlar tarixi, yong'inga qarshi himoya (sprinklerlar/gidrantlar/o't o'chirish bo'limigacha masofa), binolar orasidagi masofa, BI metodologiyasi va indemnity period, syurveyer hisoboti, tsedentning ushlanmalari va shartnomalari, qo'shni risklar, biznesni davom ettirish rejasi, EML metodologiyasi, tayyor mahsulot omborxonalari. IKKIta o'rinli javob yetarli (3 ball; har biri 1,5)."
+      "text": "KEYS A — MOL-MULK (MENA). Iskandariyadagi (Misr) to'qimachilik fabrikasi. Umumiy sug'urta summasi = USD 120 000 000, EML = sug'urta summasining 40%. Quyidagi uch qismga javob bering:\n\n(a) EML ni USD da hisoblang. Hisobni ko'rsating. (3 ball)\n\n(b) Sug'urtalovchining bir risk bo'yicha maksimal limiti — USD 1 000 000. Tsedent riskning 70% ini fakultativ bozorga joylashtiradi. Sug'urtalovchi USD 1 000 000 limitini to'liq ishlatish uchun shu 70%-li joylashtirishdan qancha ulushni (% da) olishi kerak? Hisobni ko'rsating. Maslahat: limit ÷ (sug'urta summasining 70%) × 100. (3 ball)\n\n(c) Slipdan tashqari brokerga kotirovkadan oldin beradigan IKKIta qo'shimcha savolni nomlang. Quyidagilardan tanlash mumkin: zararlar tarixi, yong'inga qarshi himoya, binolar orasidagi masofa, BI metodologiyasi, syurveyer hisoboti, qo'shni risklar. Istalgan ikkitasini tanlang va har biri nima uchun muhimligini qisqacha tushuntiring. (3 ball)",
+      "rubric": "To'liq ball (9). (a) EML = 40% × $120 mln = $48 000 000 (3 ball; metod to'g'ri lekin arifmetik xato bo'lsa — 1 ball). (b) Limit / (sug'urta summasining 70%) = 1 000 000 / 84 000 000 ≈ 1,19%. Bu hisob uchun to'liq 3 ball. Agar limit EML dan hisoblansa (1М / 33,6М ≈ 2,98%) — fikrlash ko'rsatilsa — qabul qilinadi. Postanovka to'g'ri, arifmetik xato bo'lsa — 1 ball. (c) Maqbul: COPE; 5–10 yillik zararlar tarixi; yong'inga qarshi himoya; binolar orasidagi masofa; BI metodologiyasi va indemnity period; syurveyer hisoboti; tsedent ushlanmalari va shartnomalari; qo'shni risklar. IKKI o'rinli javob qisqa asoslash bilan = 3 ball (1,5 har biri uchun)."
     },
     {
       "id": "q15", "number": 15, "type": "open", "points": 9, "part": "IV",
-      "text": "KEYS B — QURILISH (JS Osiyo). Vetnamda 450 MVt gazli elektr stantsiyasini qurish bo'yicha 28 oyga mo'ljallangan CAR + EAR arizasi, loyiha qiymati USD 480 mln. Maydon sohildan 8 km masofada, tayfun zonasida joylashgan. Tsedent asosiy CAR-joylashtirishda kvota asosida USD 500 000 ulushni so'raydi. Aynan shu risk uchun TO'RTta aniq anderrayting xavotirini sanab bering (oddiygina «tabiiy ofatlar» emas — aniq bo'ling) va har biri uchun u qanday yopilishi mumkinligini ko'rsating: sublimit, franshiza, istisno, kafolat (warranty) yoki mukofotga ustama.",
-      "rubric": "To'liq ball (9) — TO'RTta aniq xavotir va chora. ~2,25 ball har biri uchun. Maqbullari: (1) Tayfun/shamol 8 km sohildan → CAT-sublimit + shamol franshizasi + siklon tayyorgarligi bo'yicha warranty; (2) Bo'ron suvi/toshqin → toshqin sublimiti va alohida franshiza; (3) Gaz turbinasini sinash va ishga tushirish (T&C) → T&C sublimiti, T&C bosqichida yuqori franshiza, LEG2/LEG3 ko'rib chiqish; (4) Texnik xizmat ko'rsatish davri va kamchiliklar uchun javobgarlik → 12 oylik chegara, DE clause; (5) Payvandlash/hot work → hot work warranty; (6) Kran ishlari/og'ir yuklar (turbina, generator) → lifting warranty, transit sublimiti, named perils heavy lift; (7) USD-EPC kontraktda valyuta volatilligi → mukofotga ustama yoki escalation clause; (8) Subpudratchi sifati va Vetnam standartlari → surveyor warranty, PM talablari. «Ob-havo» yoki «ishchilar» kabi noaniq javoblar — qabul qilinmaydi. Har bir xavotir aniq chora bilan birga bo'lishi shart."
+      "text": "KEYS B — QURILISH (JS Osiyo). Vetnamda 450 MVt gazli elektr stantsiyasini qurish bo'yicha 28 oyga mo'ljallangan CAR + EAR arizasi, loyiha qiymati USD 480 mln. Maydon sohildan 8 km masofada, tayfun zonasida joylashgan.\n\nShu risk uchun UCHta aniq anderrayting xavotirini sanab bering va har biri qanday yopilishi mumkinligini ko'rsating. Quyidagi kategoriyalardan istalgan UCHtasini ilhom sifatida ishlating:\n\n• Tabiiy ofatlar (tayfun, bo'ron suvi, toshqin)\n• Gaz turbinasini sinash va ishga tushirish\n• Og'ir yuklar (turbina, generator)\n• Payvandlash / hot work montaj davrida\n• Mahalliy subpudratchi sifati\n\nHar bir xavotir uchun aniq chora nomini ayting: sublimit, franshiza, istisno, kafolat (warranty) yoki mukofotga ustama. Aniq bo'ling — «ob-havo» yoki «xavfsizlik» kabi noaniq javoblardan saqlaning.",
+      "rubric": "To'liq ball (9; har xavotir uchun 3). Har bir xavotir (1) shu risk uchun aniq va (2) bitta chora bilan birga bo'lishi shart. Maqbullari: (1) Tayfun/shamol 8 km sohildan → CAT-sublimit + shamol % franshizasi + siklon tayyorgarligi warranty; (2) Bo'ron suvi/toshqin → toshqin sublimiti va alohida franshiza; (3) Gaz turbinasini sinash va ishga tushirish → T&C-sublimit, T&C bosqichida yuqori franshiza, LEG2/LEG3 ko'rib chiqish; (4) Og'ir yuklar → lifting warranty, transit sublimiti, named perils heavy lift; (5) Hot work → hot work warranty; (6) Subpudratchi sifati va Vetnam standartlari → surveyor warranty, PM talablari. «Ob-havo», «ishchilar» kabi noaniq javoblar — qabul qilinmaydi. Mos chorasiz har bir xavotir ~yarim ball yo'qotadi."
     },
     {
-      "id": "q16", "number": 16, "type": "open", "points": 8, "part": "IV",
-      "text": "KEYS C — YUKLAR. Yevropalik kimyoviy mahsulotlar treyderi Rotterdamdan Xyustonga maxsus smolalar yetkazib berishni ochiq qoplama orqali sug'urtalaydi. Navbatdagi deklaratsiya — USD 4,2 mln Institute Cargo Clauses (A) shartlari bo'yicha qo'shimcha War Clauses va Strikes Clauses bilan. Kema yoshi — 22 yil, reys fevral oyida Shimoliy Atlantika orqali. (a) ICC (A) va ICC (C) qoplamalari o'rtasidagi farqni qisqacha tushuntiring. (b) Bu deklaratsiya bo'yicha IKKIta aniq xavotirni nomlang va xavfni kamaytirish chora-tadbirlarini taklif eting.",
-      "rubric": "To'liq ball (8). (a) ICC (A) — sanab o'tilgan istisnolardan tashqari barcha risklar; ICC (C) — faqat nomlangan xavflar (yong'in, kemaning cho'kishi/qattiq turishi/ag'darilishi, to'qnashuv, umumiy avariya, yukni tashlash, qutqaruv portida tushirish) — ancha tor; ICC (B) o'rtada. (4) (b) Maqbul: (i) Kema yoshi 22 yil > sanoat me'yori 15 yildan oshgan → Classification Society tasdig'i, IUMI Vessel Age Clause stavkasi, yoki rad etish; (ii) Fevralda Shimoliy Atlantika — bo'ron mavsumi → kemaning sayohatga yaroqliligi, qadoqlash, lashing-sertifikatlari, weather routing tekshiruvi; (iii) Maxsus smolalar harorat sezgir bo'lishi mumkin → stowage/harorat talablari, inherent vice istisnosi; (iv) Bitta yetkazib berish $4,2 mln per bottom sublimitidan oshishi mumkin — akkumulyatsiya tekshiruvi; (v) Xyuston — uragan zonasi (fevralda kam dolzarb). (4 ball; har biri 2)."
-    },
-    {
-      "id": "q17", "number": 17, "type": "open", "points": 6, "part": "IV",
-      "text": "KEYS D — MOL-MULK (AQSh). Floridadagi 14 ta tijorat binosidan iborat portfel bo'yicha fakultativ ariza keldi, umumiy sug'urta summasi USD 95 mln, shundan 60% ikkita sohil tumanlarida jamlangan. Shamol franshizasi — joylashuv bo'yicha sug'urta summasining 2%, AOP-franshiza — USD 25 000. Modellashtirilgan 1-100 yillik bo'ron PML = sug'urta summasining 9%. Mukofot — USD 380 000 (100%). Siz (i) rad etasizmi, (ii) shartlar bilan qabul qilasizmi yoki (iii) borligicha qabul qilasizmi? Raqamlarga tayanib UCHta aniq sabab keltiring.",
-      "rubric": "To'liq ball (6). Himoyalanadigan javob — RAD ETISH yoki SHARTLAR BILAN QABUL QILISH. Asosiy kuzatuvlar: (1) Mukofot = $380K = TSI ning 0,40% stavkasi; PML = $8,55 mln (9% × $95 mln); PML dan stavka ≈ 4,4% — Florida cat-zonasi uchun chegara holati; (2) 60% ikkita sohil tumanlarida jamlangan = jiddiy akkumulyatsiya, diversifikatsiyalanmagan; (3) Shamol franshizasi 2% per LOCATION — anderrayter foydasiga, lekin agregatlanmagan; (4) Florida = uragan kamari; PML modellashtirish farazlari tekshirilishi kerak; (5) Per-risk va CAT limit — tsedent CAT XL ga ega bo'ladimi?; (6) AOP $25K — tijorat uchun past. Raqamlar bilan uchta sabab = 6 ball; raqamlarsiz umumiy javoblar — maks. 3. «Borligicha qabul» kuchli asossiz minimum 2 ball yo'qotadi."
-    },
-    {
-      "id": "q18", "number": 18, "type": "open", "points": 3, "part": "IV",
-      "text": "Bir-ikki gap bilan har bir punktdagi farqni tushuntiring: (a) PML va EML; (b) fakultativ va obligator qayta sug'urta; (c) coinsurance sharti va proportsional tovon sharti (average clause).",
-      "rubric": "To'liq ball (3; har juftlik uchun 1). (a) PML — ishlab turgan himoya vositalari sharoitida eng ko'p kutilgan zarar; EML — ba'zi himoya vositalari ishdan chiqishini taxmin qiluvchi konservativ baholash. PML ≤ EML. (b) Fakultativ — har risk bo'yicha alohida muzokara qilinadi; obligator — bitta shartnoma asosida barcha mos risklar bo'yicha avtomatik. (c) Coinsurance (US) va average clause (UK/MDH) — amalda deyarli bir xil: kam-sug'urtalashda to'lov mutanosib ravishda kamayadi."
+      "id": "q18", "number": 16, "type": "open", "points": 4, "part": "IV",
+      "text": "Bir-ikki gap bilan har bir punktdagi farqni tushuntiring:\n\n(a) PML (Probable Maximum Loss) va EML (Estimated Maximum Loss)\n\n(b) Fakultativ va obligator qayta sug'urta\n\n(c) Coinsurance sharti va average clause sharti",
+      "rubric": "To'liq ball (4). (a) PML — ishlab turgan himoya vositalari sharoitida eng ko'p kutilgan zarar; EML — ba'zi himoya vositalari ishdan chiqishini taxmin qiluvchi konservativ baholash. PML ≤ EML (1,5 ball). (b) Fakultativ — har risk bo'yicha alohida muzokara; obligator — bitta shartnoma asosida avtomatik (1,5 ball). (c) Coinsurance (US) va average clause (UK/MDH) — amalda deyarli bir xil: kam-sug'urtalashda to'lov mutanosib kamayadi (1 ball)."
     }
   ]
 }
