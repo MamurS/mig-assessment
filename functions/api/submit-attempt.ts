@@ -184,44 +184,58 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     `select=id,attempt_id,question_id,question_type,response&attempt_id=eq.${encodeURIComponent(attemptId)}`
   );
 
-  // 3. Score each answer
-  let totalAuto = 0;
+  // 3. Score each answer — MCQs synchronously, open questions in parallel
+  // Cloudflare Functions have a CPU/wall-time limit, so we fire all the AI
+  // grading calls concurrently to stay under it.
+
+  // First pass: score MCQs deterministically (fast, no API calls)
+  const gradedAnswers: Array<{ ans: AnswerRow; points: number; feedback: string | null }> = [];
+  const openTasks: Array<Promise<{ ans: AnswerRow; points: number; feedback: string }>> = [];
 
   for (const ans of answers) {
     const key = ANSWER_KEY[ans.question_id];
     if (!key) {
-      // Unknown question — skip but log
       console.warn('Unknown question id:', ans.question_id);
       continue;
     }
 
-    let points = 0;
-    let feedback: string | null = null;
-
     if (key.type === 'mcq_single' || key.type === 'mcq_multi') {
-      points = scoreMCQ(key.type, key.correct ?? [], ans.response, key.points);
+      const points = scoreMCQ(key.type, key.correct ?? [], ans.response, key.points);
+      gradedAnswers.push({ ans, points, feedback: null });
     } else if (key.type === 'open') {
       const candidateText = typeof ans.response === 'string' ? ans.response : '';
-      const grade = await gradeOpenWithAI(
-        env,
-        key.questionText ?? '',
-        key.rubric ?? '',
-        candidateText,
-        key.points,
-        attempt.lang
+      // Don't await yet — collect promises to run them in parallel
+      openTasks.push(
+        gradeOpenWithAI(
+          env,
+          key.questionText ?? '',
+          key.rubric ?? '',
+          candidateText,
+          key.points,
+          attempt.lang
+        ).then((grade) => ({ ans, points: grade.points, feedback: grade.feedback }))
       );
-      points = grade.points;
-      feedback = grade.feedback;
     }
-
-    totalAuto += points;
-
-    // Update the answer row with auto_points and ai_feedback
-    await sbUpdate(env, 'answers', `id=eq.${ans.id}`, {
-      auto_points: points,
-      ai_feedback: feedback,
-    });
   }
+
+  // Wait for all AI grading to finish concurrently
+  const openResults = await Promise.all(openTasks);
+  gradedAnswers.push(...openResults);
+
+  // Sum total and write all results to DB in parallel as well
+  let totalAuto = 0;
+  for (const g of gradedAnswers) {
+    totalAuto += g.points;
+  }
+
+  await Promise.all(
+    gradedAnswers.map((g) =>
+      sbUpdate(env, 'answers', `id=eq.${g.ans.id}`, {
+        auto_points: g.points,
+        ai_feedback: g.feedback,
+      })
+    )
+  );
 
   // 4. Update attempt: status -> submitted, auto_score, submitted_at
   // We use a direct PATCH so we can set submitted_at = now() server-side.
