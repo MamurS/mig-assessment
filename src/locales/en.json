@@ -150,7 +150,7 @@
         { "letter": "A", "text": "Central Bank of the Republic of Uzbekistan (CBU)" },
         { "letter": "B", "text": "National Agency of Perspective Projects under the President of the Republic of Uzbekistan (NAPP, former NAPU)" },
         { "letter": "C", "text": "State Tax Committee" },
-        { "letter": "D", "text": "Ministry of Economy and Finance — Customs Department" }
+        { "letter": "D", "text": "Ministry of Economy and Finance" }
       ],
       "correct": ["B"]
     },
