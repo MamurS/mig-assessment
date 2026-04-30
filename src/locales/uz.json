@@ -150,7 +150,7 @@
         { "letter": "A", "text": "O'zbekiston Respublikasi Markaziy banki (MB)" },
         { "letter": "B", "text": "O'zbekiston Respublikasi Prezidenti huzuridagi Istiqbolli loyihalar milliy agentligi (NAPP, sobiq NAPU)" },
         { "letter": "C", "text": "Davlat soliq qo'mitasi" },
-        { "letter": "D", "text": "Iqtisodiyot va moliya vazirligi — Bojxona departamenti" }
+        { "letter": "D", "text": "Iqtisodiyot va moliya vazirligi" }
       ],
       "correct": ["B"]
     },
