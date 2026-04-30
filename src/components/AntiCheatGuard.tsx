@@ -1,9 +1,12 @@
 // src/components/AntiCheatGuard.tsx
 //
-// Detects tab switching, focus loss, alt-tab, refresh, etc.
-// Shows a 5-second countdown warning. If user doesn't return in time,
-// reports a violation and clears sessionStorage so they're forced
-// back to landing. Original answers stay in DB for admin review.
+// Maximum-deterrent anti-cheat guard.
+// On tab/window/app switch:
+//   1. Audio alarm (plays even when tab is not focused)
+//   2. Tab title flashes "⚠️ RETURN TO TEST"
+//   3. Browser notification (if user has granted permission)
+//   4. Red overlay with 5-second countdown (visible when they come back)
+//   5. If they don't return in time → violation reported, sessionStorage wiped, redirected
 
 import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -11,11 +14,6 @@ import { useNavigate } from 'react-router-dom';
 interface Props {
   attemptId: string;
   graceSeconds?: number;
-  /**
-   * When true, all anti-cheat detection is paused.
-   * Use this during submit (so the candidate can't accidentally trigger a reset
-   * while waiting 10-15 seconds for AI grading to finish).
-   */
   paused?: boolean;
 }
 
@@ -23,8 +21,127 @@ export default function AntiCheatGuard({ attemptId, graceSeconds = 5, paused = f
   const navigate = useNavigate();
   const [warning, setWarning] = useState<{ reason: string; remaining: number } | null>(null);
   const timerRef = useRef<number | null>(null);
+  const titleFlashRef = useRef<number | null>(null);
   const warnedRef = useRef(false);
   const triggeredRef = useRef(false);
+  const audioCtxRef = useRef<AudioContext | null>(null);
+  const oscillatorRef = useRef<OscillatorNode | null>(null);
+  const gainNodeRef = useRef<GainNode | null>(null);
+  const originalTitleRef = useRef<string>('');
+  const notificationRef = useRef<Notification | null>(null);
+
+  useEffect(() => {
+    originalTitleRef.current = document.title;
+
+    if ('Notification' in window && Notification.permission === 'default') {
+      Notification.requestPermission().catch(() => {});
+    }
+
+    return () => {
+      document.title = originalTitleRef.current;
+      stopTitleFlash();
+      stopAlarm();
+      closeNotification();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  function startAlarm() {
+    try {
+      if (!audioCtxRef.current) {
+        const Ctx = window.AudioContext || (window as unknown as { webkitAudioContext: typeof AudioContext }).webkitAudioContext;
+        audioCtxRef.current = new Ctx();
+      }
+      const ctx = audioCtxRef.current;
+      if (ctx.state === 'suspended') {
+        ctx.resume().catch(() => {});
+      }
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = 'square';
+      osc.frequency.setValueAtTime(880, ctx.currentTime);
+      gain.gain.setValueAtTime(0.15, ctx.currentTime);
+
+      const startT = ctx.currentTime;
+      for (let i = 0; i < 60; i++) {
+        const t = startT + i * 0.4;
+        gain.gain.setValueAtTime(0.15, t);
+        gain.gain.setValueAtTime(0.0, t + 0.2);
+        osc.frequency.setValueAtTime(i % 2 === 0 ? 880 : 660, t);
+      }
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+      osc.start();
+
+      oscillatorRef.current = osc;
+      gainNodeRef.current = gain;
+    } catch (e) {
+      console.warn('audio alarm failed', e);
+    }
+  }
+
+  function stopAlarm() {
+    try {
+      if (oscillatorRef.current) {
+        oscillatorRef.current.stop();
+        oscillatorRef.current.disconnect();
+        oscillatorRef.current = null;
+      }
+      if (gainNodeRef.current) {
+        gainNodeRef.current.disconnect();
+        gainNodeRef.current = null;
+      }
+    } catch {}
+  }
+
+  function startTitleFlash() {
+    stopTitleFlash();
+    let flip = false;
+    const original = originalTitleRef.current || 'Mosaic Trainee Assessment';
+    titleFlashRef.current = window.setInterval(() => {
+      flip = !flip;
+      document.title = flip ? '⚠️ RETURN TO TEST ⚠️' : original;
+    }, 700);
+  }
+
+  function stopTitleFlash() {
+    if (titleFlashRef.current !== null) {
+      window.clearInterval(titleFlashRef.current);
+      titleFlashRef.current = null;
+    }
+    document.title = originalTitleRef.current || 'Mosaic Trainee Assessment';
+  }
+
+  function showNotification() {
+    if (!('Notification' in window)) return;
+    if (Notification.permission !== 'granted') return;
+    try {
+      closeNotification();
+      notificationRef.current = new Notification('⚠️ Return to the test', {
+        body: 'Switching tabs or apps during the test is not allowed. Return immediately or your session will be reset.',
+        requireInteraction: true,
+        silent: false,
+      });
+      notificationRef.current.onclick = () => {
+        window.focus();
+        if (notificationRef.current) {
+          notificationRef.current.close();
+        }
+      };
+    } catch (e) {
+      console.warn('notification failed', e);
+    }
+  }
+
+  function closeNotification() {
+    if (notificationRef.current) {
+      try { notificationRef.current.close(); } catch {}
+      notificationRef.current = null;
+    }
+  }
 
   function clearWarningTimer() {
     if (timerRef.current !== null) {
@@ -36,6 +153,9 @@ export default function AntiCheatGuard({ attemptId, graceSeconds = 5, paused = f
   async function reportAndReset(reason: 'visibility' | 'blur' | 'unload' | 'manual') {
     if (triggeredRef.current) return;
     triggeredRef.current = true;
+    stopAlarm();
+    stopTitleFlash();
+    closeNotification();
     try {
       await fetch('/api/report-violation', {
         method: 'POST',
@@ -56,6 +176,11 @@ export default function AntiCheatGuard({ attemptId, graceSeconds = 5, paused = f
     if (warnedRef.current) return;
     warnedRef.current = true;
     setWarning({ reason, remaining: graceSeconds });
+    startAlarm();
+    startTitleFlash();
+    showNotification();
+
+    try { window.focus(); } catch {}
 
     let remaining = graceSeconds;
     timerRef.current = window.setInterval(() => {
@@ -72,6 +197,9 @@ export default function AntiCheatGuard({ attemptId, graceSeconds = 5, paused = f
   function cancelCountdown() {
     if (!warnedRef.current) return;
     clearWarningTimer();
+    stopAlarm();
+    stopTitleFlash();
+    closeNotification();
     setWarning(null);
     warnedRef.current = false;
   }
@@ -119,6 +247,9 @@ export default function AntiCheatGuard({ attemptId, graceSeconds = 5, paused = f
 
     return () => {
       clearWarningTimer();
+      stopTitleFlash();
+      stopAlarm();
+      closeNotification();
       document.removeEventListener('visibilitychange', onVisibility);
       window.removeEventListener('blur', onBlur);
       window.removeEventListener('focus', onFocus);
