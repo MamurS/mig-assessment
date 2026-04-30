@@ -4,6 +4,7 @@ import { supabase } from '@/lib/supabase';
 import { getTest, formatDuration } from '@/lib/test-content';
 import QuestionRenderer from '@/components/QuestionRenderer';
 import BrandHeader from '@/components/BrandHeader';
+import AntiCheatGuard from '@/components/AntiCheatGuard';
 import type { Lang, Question } from '@/types';
 
 interface AttemptState {
@@ -17,7 +18,6 @@ export default function TestPage() {
   const { attemptId } = useParams<{ attemptId: string }>();
   const navigate = useNavigate();
 
-  // Read attempt state from sessionStorage (set on landing page)
   const stateRaw = attemptId ? sessionStorage.getItem(`attempt-${attemptId}`) : null;
   const attemptState: AttemptState | null = stateRaw ? JSON.parse(stateRaw) : null;
 
@@ -27,7 +27,6 @@ export default function TestPage() {
   const [submitErr, setSubmitErr] = useState<string | null>(null);
   const [secondsLeft, setSecondsLeft] = useState<number>(0);
 
-  // ALL HOOKS must run before any early return.
   const t = useMemo(
     () => (attemptState ? getTest(attemptState.lang) : null),
     [attemptState]
@@ -40,7 +39,6 @@ export default function TestPage() {
     return attemptState.questionOrder.map((id) => map.get(id)!).filter(Boolean);
   }, [t, attemptState]);
 
-  // Timer
   useEffect(() => {
     if (!attemptState) return;
     function tick() {
@@ -49,7 +47,6 @@ export default function TestPage() {
       const left = Math.max(0, Math.floor((ends - now) / 1000));
       setSecondsLeft(left);
       if (left === 0) {
-        // Auto-submit
         handleSubmit(true);
       }
     }
@@ -59,11 +56,9 @@ export default function TestPage() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Autosave debounce
   const saveAnswer = useCallback(
     async (questionId: string, response: string[] | string, type: string) => {
       if (!attemptId) return;
-      // Upsert by (attempt_id, question_id) — schema has unique constraint
       const { error } = await supabase.from('answers').upsert(
         {
           attempt_id: attemptId,
@@ -80,7 +75,6 @@ export default function TestPage() {
     [attemptId]
   );
 
-  // Debounced autosave — saves 600ms after last change for current question
   useEffect(() => {
     const cur = orderedQuestions[currentIdx];
     if (!cur) return;
@@ -101,7 +95,6 @@ export default function TestPage() {
     setSubmitErr(null);
 
     try {
-      // Save any pending responses synchronously
       for (const q of orderedQuestions) {
         const resp = responses[q.id];
         if (resp !== undefined) {
@@ -109,7 +102,6 @@ export default function TestPage() {
         }
       }
 
-      // Trigger server-side grading
       const res = await fetch('/api/submit-attempt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -132,7 +124,6 @@ export default function TestPage() {
     }
   }
 
-  // Now safe to do early returns
   if (!attemptId || !attemptState) {
     return <Navigate to="/" replace />;
   }
@@ -147,9 +138,9 @@ export default function TestPage() {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <AntiCheatGuard attemptId={attemptId} paused={submitting} />
       <BrandHeader small />
 
-      {/* Sticky timer bar */}
       <div className="sticky top-0 z-10 bg-white/95 backdrop-blur border-b border-ink-100">
         <div className="max-w-4xl mx-auto px-6 py-3 flex items-center justify-between gap-6">
           <div className="flex items-center gap-3">
@@ -165,7 +156,6 @@ export default function TestPage() {
             </div>
           </div>
           <div className="flex-1 max-w-md mx-6">
-            {/* Progress bar */}
             <div className="h-1.5 bg-ink-100 rounded overflow-hidden">
               <div
                 className="h-full bg-accent-500 transition-all duration-300"
@@ -233,7 +223,6 @@ export default function TestPage() {
           </div>
         </div>
 
-        {/* Question navigator */}
         <div className="mt-6 flex flex-wrap gap-1.5 justify-center">
           {orderedQuestions.map((q, idx) => {
             const answered = responses[q.id] !== undefined &&
