@@ -17,7 +17,7 @@ interface Props {
   paused?: boolean;
 }
 
-export default function AntiCheatGuard({ attemptId, graceSeconds = 5, paused = false }: Props) {
+export default function AntiCheatGuard({ attemptId, graceSeconds = 15, paused = false }: Props) {
   const navigate = useNavigate();
   const [warning, setWarning] = useState<{ reason: string; remaining: number } | null>(null);
   const timerRef = useRef<number | null>(null);
