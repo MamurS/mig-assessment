@@ -1,14 +1,7 @@
 import { createClient } from '@supabase/supabase-js';
 
-const url = import.meta.env.VITE_SUPABASE_URL as string;
-const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
-console.log('SUPABASE KEY AT BUILD:', anonKey ? `present (${anonKey.slice(0,10)}...)` : 'MISSING');
-
-if (!url || !anonKey) {
-  // Fail fast in dev so we don't silently submit to nowhere.
-  // eslint-disable-next-line no-console
-  console.error('Missing VITE_SUPABASE_URL or VITE_SUPABASE_ANON_KEY env vars.');
-}
+const url = 'https://fuovlibdyokjprqjkjtr.supabase.co';
+const anonKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1b3ZsaWJkeW9ranBycWpranRyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzcyODcyOTgsImV4cCI6MjA5Mjg2MzI5OH0.iWwML8_TKBXmHTPZIvjNgeklfUQiOtMJgS91iGw52MI';
 
 export const supabase = createClient(url, anonKey, {
   auth: {
