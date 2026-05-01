@@ -1,6 +1,5 @@
 # MIG Trainee Assessment
 
-
 A web-based insurance underwriting test for trainees at Mosaic Insurance Group.
 
 - **Frontend**: React + TypeScript + Vite + Tailwind, deployed on Cloudflare Pages
