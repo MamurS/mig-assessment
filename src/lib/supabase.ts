@@ -2,6 +2,7 @@ import { createClient } from '@supabase/supabase-js';
 
 const url = import.meta.env.VITE_SUPABASE_URL as string;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY as string;
+console.log('SUPABASE KEY AT BUILD:', anonKey ? `present (${anonKey.slice(0,10)}...)` : 'MISSING');
 
 if (!url || !anonKey) {
   // Fail fast in dev so we don't silently submit to nowhere.
