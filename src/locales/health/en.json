@@ -1,0 +1,195 @@
+{
+  "lang": "en",
+  "title": "Assistant Manager — Health Insurance",
+  "subtitle": "Health Insurance Underwriting — Assistant Manager Assessment",
+  "org": "Mosaic Insurance Group JSC",
+  "instructions": "Time limit: 90 minutes. Total: 100 points. Calculators allowed; no internet, no notes. For multiple-choice questions, select one (or two where indicated) answer. For open-ended questions, write your reasoning clearly — partial credit is awarded for correct logic even if the final number is off.",
+  "partLabels": {
+    "I": "Part I — Logical Reasoning (18 points)",
+    "II": "Part II — Health Insurance Principles (39 points)",
+    "III": "Part III — Uzbekistan Market & Legislation (27 points)",
+    "IV": "Part IV — Health Insurance Underwriting Cases (16 points)"
+  },
+  "ui": {
+    "candidate_name": "Full name",
+    "candidate_email": "Email address",
+    "start": "Start test",
+    "next": "Next",
+    "prev": "Previous",
+    "submit": "Submit test",
+    "submit_confirm": "Submit your test? You cannot change answers after this.",
+    "time_remaining": "Time remaining",
+    "select_lang": "Language",
+    "welcome": "Welcome",
+    "welcome_body": "Please enter your details and select a language. The test takes 90 minutes once started.",
+    "open_answer_placeholder": "Write your answer here…",
+    "submitting": "Submitting and grading…",
+    "submitted_title": "Test submitted",
+    "submitted_body": "Thank you. Your responses have been recorded. Your manager will review the results and follow up with you.",
+    "error": "Something went wrong. Please try again.",
+    "required": "This field is required.",
+    "invalid_email": "Please enter a valid email.",
+    "already_taken": "A test has already been completed with this email.",
+    "page_label": "Question"
+  },
+  "questions": [
+    {
+      "id": "q1", "number": 1, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "All certified surveyors are authorised to sign loss reports. Some authorised signatories are not employed by the insurer. No external consultant is employed by the insurer. Which conclusion MUST be true?",
+      "options": [
+        { "letter": "A", "text": "All certified surveyors are external consultants." },
+        { "letter": "B", "text": "Some certified surveyors may be external consultants." },
+        { "letter": "C", "text": "No certified surveyor is an external consultant." },
+        { "letter": "D", "text": "All external consultants are certified surveyors." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q2", "number": 2, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "Four claims — A, B, C, D — must be processed in some order under these rules: (i) B is processed before D. (ii) A is processed immediately after C. (iii) D is not last. Which order is possible?",
+      "options": [
+        { "letter": "A", "text": "B, C, A, D" },
+        { "letter": "B", "text": "C, A, B, D" },
+        { "letter": "C", "text": "B, D, C, A" },
+        { "letter": "D", "text": "C, A, D, B" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q3", "number": 3, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "A reinsurer accepts a risk only if BOTH the 5-year loss ratio is below 60% AND the cedent's rating is A- or higher. A submission shows: 5-year loss ratio = 45%, cedent rating = BBB+. Which statement is logically correct?",
+      "options": [
+        { "letter": "A", "text": "The risk will be accepted, because the loss ratio condition is met." },
+        { "letter": "B", "text": "The risk will be declined, because at least one required condition fails." },
+        { "letter": "C", "text": "The risk will be accepted, because BBB+ is acceptable when loss ratio is good." },
+        { "letter": "D", "text": "Cannot be determined from the information given." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh1", "number": 4, "type": "mcq_single", "points": 7, "part": "II",
+      "text": "In a corporate (employer-sponsored) voluntary health insurance contract, the mandatory parties are:",
+      "options": [
+        { "letter": "A", "text": "Only the insurer and the policyholder" },
+        { "letter": "B", "text": "The insurer, the policyholder, and the medical institution" },
+        { "letter": "C", "text": "The insurer, the policyholder, the insured person, and the medical institution" },
+        { "letter": "D", "text": "Only the insurer and the insured person" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "qh2", "number": 5, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Which set of services is TYPICALLY included in a standard corporate voluntary health insurance policy?",
+      "options": [
+        { "letter": "A", "text": "Only inpatient medical care and surgical operations" },
+        { "letter": "B", "text": "Outpatient/clinic care, emergency and planned inpatient care, diagnostics, dental (limited)" },
+        { "letter": "C", "text": "All medical services without limit, including cosmetology and plastic surgery" },
+        { "letter": "D", "text": "Only preventive check-ups and vaccinations" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh3", "number": 6, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "What does the \"sum insured\" describe in a voluntary health insurance contract?",
+      "options": [
+        { "letter": "A", "text": "The premium amount paid by the policyholder" },
+        { "letter": "B", "text": "The monthly contribution paid by the insured person" },
+        { "letter": "C", "text": "The maximum aggregate amount the insurer will pay under the contract during its term" },
+        { "letter": "D", "text": "The cost of a single medical service in the partner clinic's price list" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "qh4", "number": 7, "type": "mcq_single", "points": 7, "part": "II",
+      "text": "Which of the following events is MOST commonly an exclusion under a standard corporate voluntary health insurance contract?",
+      "options": [
+        { "letter": "A", "text": "Acute respiratory illness" },
+        { "letter": "B", "text": "Injury sustained on the way to work" },
+        { "letter": "C", "text": "Treatment of conditions arising from alcohol or drug intoxication" },
+        { "letter": "D", "text": "Routine consultation with a general practitioner" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "qh5", "number": 8, "type": "mcq_single", "points": 7, "part": "II",
+      "text": "Which of the following factors does NOT directly affect the cost of a corporate voluntary health insurance policy?",
+      "options": [
+        { "letter": "A", "text": "Age and gender composition of the insured group" },
+        { "letter": "B", "text": "List of medical institutions included in the programme and their price tier" },
+        { "letter": "C", "text": "Loss history of the group (loss ratio in prior periods)" },
+        { "letter": "D", "text": "Legal form of the policyholder (LLC, JSC, sole proprietor)" }
+      ],
+      "correct": ["D"]
+    },
+    {
+      "id": "qh6", "number": 9, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "What is a \"deductible\" in a voluntary health insurance contract?",
+      "options": [
+        { "letter": "A", "text": "A discount granted to the policyholder for a loss-free year" },
+        { "letter": "B", "text": "The portion of medical expenses the insured person pays themselves before the insurer's coverage begins" },
+        { "letter": "C", "text": "The commission of the insurance agent" },
+        { "letter": "D", "text": "The insurer's reserve for catastrophic losses" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh7", "number": 10, "type": "mcq_single", "points": 7, "part": "III",
+      "text": "Under the Law of the Republic of Uzbekistan \"On Insurance Activity\", an insurer's maximum retention on a single risk is generally limited to:",
+      "options": [
+        { "letter": "A", "text": "5% of paid-in charter capital" },
+        { "letter": "B", "text": "10% of own funds (capital + reserves)" },
+        { "letter": "C", "text": "25% of gross written premium" },
+        { "letter": "D", "text": "Not limited by law" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh8", "number": 11, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Which Uzbek state body is the primary regulator of the insurance market and supervises solvency, licensing, and market conduct?",
+      "options": [
+        { "letter": "A", "text": "Central Bank of the Republic of Uzbekistan" },
+        { "letter": "B", "text": "National Agency of Perspective Projects under the President of the Republic of Uzbekistan (NAPP, formerly NAPU)" },
+        { "letter": "C", "text": "State Tax Committee" },
+        { "letter": "D", "text": "Ministry of Economy and Finance" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh9", "number": 12, "type": "mcq_single", "points": 7, "part": "III",
+      "text": "To carry out voluntary health insurance activity in the Republic of Uzbekistan, an insurance organisation:",
+      "options": [
+        { "letter": "A", "text": "Does not need a separate licence — a general insurance activity licence is sufficient" },
+        { "letter": "B", "text": "Must obtain a licence for voluntary insurance (general insurance) which includes the \"medical insurance\" class, issued by the regulator" },
+        { "letter": "C", "text": "Must obtain a licence from the Ministry of Health" },
+        { "letter": "D", "text": "Is exempt from licensing if the policyholder is a state-owned entity" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh10", "number": 13, "type": "mcq_single", "points": 7, "part": "III",
+      "text": "Under Uzbek legislation on personal data and protection of citizens' health, when processing medical data of insured persons under a voluntary health insurance contract, the insurer:",
+      "options": [
+        { "letter": "A", "text": "May freely transfer data to third parties for marketing purposes since it is automatically anonymised" },
+        { "letter": "B", "text": "Must obtain consent from the data subject, ensure confidentiality of medical privacy, and process data only for the purposes of performing the insurance contract" },
+        { "letter": "C", "text": "Is exempt from confidentiality requirements as a financial institution" },
+        { "letter": "D", "text": "May transfer any volume of data to the employer-policyholder without the insured person's consent" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh11", "number": 14, "type": "open", "points": 6, "part": "IV",
+      "text": "CASE A: Underwriting a corporate programme.\n\n\"AlmazStroy\" LLC (a construction company, 240 employees) has applied for a corporate voluntary health insurance policy. From the application:\n• Age composition: 38% are aged 40+, average age 42\n• 55% of employees are construction site workers (welders, fitters, general labourers)\n• 45% are administrative staff (Tashkent office)\n• The company changed insurers twice last year\n• Requested programme: \"Premium\" (including dental and planned hospitalisation)\n• Per-insured limit: 50 million UZS\n\nAnswer in writing:\n\n(a) Name THREE specific risk factors that increase the expected loss ratio of this group, and justify each. (3 points)\n\n(b) Suggest TWO structural measures (deductible, co-payment, exclusion, sub-limit, splitting the programme by employee category, etc.) you would recommend implementing, and explain how each measure affects loss ratio. (3 points)",
+      "rubric": "Full marks (6 pts). (a) [3 pts] Acceptable factors include: (1) high share of construction-site workers — elevated injury risk (welders, fitters, work at height, with welding equipment); (2) average age 42 and 38% aged 40+ — higher chronic disease prevalence (cardiovascular, musculoskeletal); (3) two insurer changes in one year — sign of anti-selection / accumulated unsettled claims / dissatisfaction; (4) \"Premium\" programme with dental and planned hospitalisation — high frequency + high average cost; (5) 50M UZS limit — high catastrophic exposure. THREE specific factors with justification = 3 pts (1 per factor). Without justification — 0.5 per factor. (b) [3 pts] Acceptable: (1) splitting the programme by category — site workers on a programme without dental or with reduced dental sub-limit, since they drive injury claims and high-cost dental; (2) 10–20% co-payment on planned services — discourages over-utilisation, especially diagnostics and dental; (3) deductible on planned hospitalisation — filters out small/manipulative claims; (4) exclusion or sub-limit on pre-existing conditions; (5) 2–3 month waiting period on planned hospitalisation and dental — protects against anti-selection. TWO specific measures with explanation of mechanism = 3 pts (1.5 each). Without explaining the mechanism — 0.5 per measure. Vague answers (\"raise the rate\") — 0 pts."
+    },
+    {
+      "id": "qh12", "number": 15, "type": "open", "points": 6, "part": "IV",
+      "text": "CASE B: Claims handling.\n\nAn insured person under a corporate voluntary health insurance policy approached a partner clinic complaining of back pain. The clinic performed an MRI and proposed a surgical procedure (L4-L5 disc herniation) costing 28 million UZS. The policyholder applied to the insurer for confirmation of whether this case is covered by the policy or not.\n\nDuring claim review, the claims department found:\n• The patient did not declare back issues at intake when joining the company 3 years ago\n• Outpatient clinic records show consultations for back pain BEFORE the voluntary health insurance contract was signed\n• The voluntary health insurance contract was signed 4 months ago\n• The contract contains a standard \"pre-existing conditions\" exclusion clause\n\nAnswer in writing:\n\n(a) What decision should the claims department make and on what legal and contractual basis? (3 points)\n\n(b) Which TWO documents/actions must the insurer prepare to make the decision legally defensible if the insured person or the employer appeals? (3 points)",
+      "rubric": "Full marks (6 pts). (a) [3 pts] Correct answer: DECLINE the payment (or qualify the case as non-insurable) on the basis of the contract's pre-existing conditions exclusion clause, since the patient's outpatient clinic records show consultations for back pain BEFORE the contract's effective date. Legal basis — articles of the Civil Code of Uzbekistan on insurance (freedom of contract, binding nature of contractual conditions) + the specific clause of the voluntary health insurance contract. Full 3 pts for: (1) stating decision \"decline\"/\"non-insurable\", (2) referencing the contract's pre-existing exclusion clause, (3) referencing the legal basis (contract/Civil Code). 2 pts if 2 of the 3 elements. 1 pt if only \"decline\" without justification. (b) [3 pts] Acceptable: (1) written motivated denial letter to the insured person and policyholder, citing the specific contract clause and attaching supporting medical documents; (2) copy of the outpatient medical record showing consultations BEFORE the contract date (obtained with patient consent or via the medical institution); (3) report/opinion of the insurer's medical expert on causation; (4) internal incident investigation report; (5) notification of the employer-policyholder of the decision. TWO specific documents/actions = 3 pts (1.5 each). Vague answers (\"prepare a denial\") without specifying HOW — 1 pt."
+    },
+    {
+      "id": "qh13", "number": 16, "type": "open", "points": 4, "part": "IV",
+      "text": "CASE C: Loss ratio calculation and rate recommendation.\n\nA corporate client is in their second year of insurance. First-year data:\n• Net premium paid by policyholder: 480M UZS\n• Medical claims paid by insurer: 612M UZS\n• Acquisition/operating expenses: 12% of premium\n\nAnswer in writing:\n\n(a) Calculate the loss ratio and combined ratio for the first year. Show your calculation. (2 points)\n\n(b) Based on the result, give a justified rate recommendation for year two — a specific percentage increase AND at LEAST TWO additional measures you would propose beyond the rate increase. (2 points)",
+      "rubric": "Full marks (4 pts). (a) [2 pts] Loss ratio = claims / premium = 612 / 480 = 127.5%. Combined ratio = loss ratio + expense ratio = 127.5% + 12% = 139.5%. Full 2 pts for both metrics with calculation shown. 1 pt if only one metric correct or correct method with arithmetic error. 0 pts if calculation not shown or both metrics wrong. (b) [2 pts] Justified recommendation: rate increase of approximately 40–50% (to cover excess claims + rebuild margin). Range 30–60% with justification accepted. Additional measures (at least 2 of): (1) introducing/raising deductible or co-payment; (2) revising the partner-clinic list to less expensive ones; (3) excluding the most expensive services (e.g. planned dental); (4) waiting period for planned procedures; (5) sub-limits on specific services (e.g. MRI, CT); (6) claims audit and verification of claim validity; (7) analysis of claims structure for anti-selection. Full 2 pts for specific percentage AND 2 specific measures. 1 pt if only rate increase without measures OR only measures without specific percentage. 0 pts if neither specific percentage nor measures."
+    }
+  ]
+}
