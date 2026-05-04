@@ -71,8 +71,8 @@
       "text": "In a corporate (employer-sponsored) voluntary health insurance contract, the mandatory parties are:",
       "options": [
         { "letter": "A", "text": "Only the insurer and the policyholder" },
-        { "letter": "B", "text": "The insurer, the policyholder, and the medical institution" },
-        { "letter": "C", "text": "The insurer, the policyholder, the insured person, and the medical institution" },
+        { "letter": "B", "text": "The insurer, the policyholder, and the Third Party Administrator (TPA)" },
+        { "letter": "C", "text": "The insurer, the policyholder, the insured person, and the Third Party Administrator (TPA)" },
         { "letter": "D", "text": "Only the insurer and the insured person" }
       ],
       "correct": ["C"]
