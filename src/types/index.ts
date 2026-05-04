@@ -1,6 +1,8 @@
-// Test content types — these mirror the JSON in src/locales/
+// Test content types — these mirror the JSON in src/locales/<version>/
 
 export type Lang = 'en' | 'ru' | 'uz';
+
+export type Version = 'reinsurance' | 'health';
 
 export type QuestionType = 'mcq_single' | 'mcq_multi' | 'open';
 
@@ -71,6 +73,7 @@ export interface Attempt {
   candidate_name: string;
   candidate_email: string;
   lang: Lang;
+  version: Version;
   started_at: string;      // ISO
   submitted_at: string | null;
   auto_score: number | null;       // sum of MCQ + AI-graded
