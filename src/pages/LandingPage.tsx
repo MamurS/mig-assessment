@@ -1,18 +1,20 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BrandHeader from '@/components/BrandHeader';
-import { LANGUAGES, getTest, isValidEmail, shuffleQuestionOrder, TEST_DURATION_MINUTES } from '@/lib/test-content';
-import type { Lang } from '@/types';
+import { LANGUAGES, VERSIONS, getTest, isValidEmail, shuffleQuestionOrder, TEST_DURATION_MINUTES } from '@/lib/test-content';
+import type { Lang, Version } from '@/types';
 
 export default function LandingPage() {
   const navigate = useNavigate();
+  const [version, setVersion] = useState<Version>('reinsurance');
   const [lang, setLang] = useState<Lang>('en');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [busy, setBusy] = useState(false);
   const [err, setErr] = useState<string | null>(null);
 
-  const t = getTest(lang);
+  const t = getTest(version, lang);
+  const versionDescription = VERSIONS.find((v) => v.value === version)?.description ?? '';
 
   async function handleStart() {
     setErr(null);
@@ -28,22 +30,28 @@ export default function LandingPage() {
           name: name.trim(),
           email: email.trim().toLowerCase(),
           lang,
+          version,
           questionOrder: shuffleQuestionOrder(t.questions),
         }),
       });
 
       const data = (await res.json()) as
         | { error: string }
-        | { attemptId: string; startedAt: string; questionOrder: string[] };
+        | { attemptId: string; startedAt: string; questionOrder: string[]; version: Version; resumed?: boolean };
       if (!res.ok) {
         const errKey = (data as { error: string }).error;
         setErr(errKey === 'already_taken' ? t.ui.already_taken : t.ui.error);
         setBusy(false);
         return;
       }
-      const ok = data as { attemptId: string; startedAt: string; questionOrder: string[] };
+      const ok = data as { attemptId: string; startedAt: string; questionOrder: string[]; version: Version; resumed?: boolean };
 
+      // Trust the server-returned version on resume — it's the source of truth.
+      // (If the candidate started a Reinsurance attempt earlier, then session-reset
+      // and accidentally chose Health on the landing page, we still load Reinsurance
+      // since that's what was originally started.)
       sessionStorage.setItem(`attempt-${ok.attemptId}`, JSON.stringify({
+        version: ok.version ?? version,
         lang,
         startedAt: ok.startedAt,
         endsAt: new Date(new Date(ok.startedAt).getTime() + TEST_DURATION_MINUTES * 60_000).toISOString(),
@@ -77,6 +85,24 @@ export default function LandingPage() {
           <p className="text-xs text-ink-500 mt-3 leading-relaxed">{t.instructions}</p>
 
           <div className="mt-8 space-y-4">
+            <div>
+              <label className="label">Test version</label>
+              <select
+                className="input"
+                value={version}
+                onChange={(e) => setVersion(e.target.value as Version)}
+              >
+                {VERSIONS.map((v) => (
+                  <option key={v.value} value={v.value}>
+                    {v.label}
+                  </option>
+                ))}
+              </select>
+              {versionDescription && (
+                <p className="text-xs text-ink-500 mt-1.5 leading-relaxed">{versionDescription}</p>
+              )}
+            </div>
+
             <div>
               <label className="label">{t.ui.select_lang}</label>
               <div className="flex gap-2">
