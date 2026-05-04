@@ -101,12 +101,13 @@ export default function TestPage() {
 
     try {
       // Final pass: persist any answers the autosave debounce hasn't flushed yet.
-      for (const q of orderedQuestions) {
-        const resp = responses[q.id];
-        if (resp !== undefined) {
-          await saveAnswer(q.id, resp, q.type);
-        }
-      }
+      // Run all the saves IN PARALLEL — previously this was a sequential for-await
+      // loop that took ~150-300ms per question = 2-5 seconds for 16 questions.
+      await Promise.all(
+        orderedQuestions
+          .filter((q) => responses[q.id] !== undefined)
+          .map((q) => saveAnswer(q.id, responses[q.id], q.type))
+      );
 
       // Submit the attempt. The server now responds quickly (just MCQ scoring
       // + DB write), and AI grading runs in the background via waitUntil().
