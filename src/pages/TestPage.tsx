@@ -5,9 +5,10 @@ import { getTest, formatDuration } from '@/lib/test-content';
 import QuestionRenderer from '@/components/QuestionRenderer';
 import BrandHeader from '@/components/BrandHeader';
 import AntiCheatGuard from '@/components/AntiCheatGuard';
-import type { Lang, Question } from '@/types';
+import type { Lang, Question, Version } from '@/types';
 
 interface AttemptState {
+  version: Version;
   lang: Lang;
   startedAt: string;
   endsAt: string;
@@ -28,7 +29,7 @@ export default function TestPage() {
   const [secondsLeft, setSecondsLeft] = useState<number>(0);
 
   const t = useMemo(
-    () => (attemptState ? getTest(attemptState.lang) : null),
+    () => (attemptState ? getTest(attemptState.version ?? 'reinsurance', attemptState.lang) : null),
     [attemptState]
   );
 
