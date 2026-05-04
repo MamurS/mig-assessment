@@ -1,26 +1,39 @@
-import enContent from '@/locales/en.json';
-import ruContent from '@/locales/ru.json';
-import uzContent from '@/locales/uz.json';
-import type { Lang, TestContent } from '@/types';
+import reinsuranceEn from '@/locales/reinsurance/en.json';
+import reinsuranceRu from '@/locales/reinsurance/ru.json';
+import reinsuranceUz from '@/locales/reinsurance/uz.json';
+import healthEn from '@/locales/health/en.json';
+import healthRu from '@/locales/health/ru.json';
+import healthUz from '@/locales/health/uz.json';
+import type { Lang, TestContent, Version } from '@/types';
 
-const tests: Record<Lang, TestContent> = {
-  en: enContent as TestContent,
-  ru: ruContent as TestContent,
-  uz: uzContent as TestContent,
+const tests: Record<Version, Record<Lang, TestContent>> = {
+  reinsurance: {
+    en: reinsuranceEn as TestContent,
+    ru: reinsuranceRu as TestContent,
+    uz: reinsuranceUz as TestContent,
+  },
+  health: {
+    en: healthEn as TestContent,
+    ru: healthRu as TestContent,
+    uz: healthUz as TestContent,
+  },
 };
 
-export function getTest(lang: Lang): TestContent {
-  return tests[lang];
+export function getTest(version: Version, lang: Lang): TestContent {
+  return tests[version][lang];
 }
 
-// Build a lookup of correct answers and rubrics indexed by question id.
-// Same across all languages, so we use EN as the canonical source.
-export function getAnswerKey(): Record<
+// Build a lookup of correct answers and rubrics indexed by question id, for a given version.
+// Same content across all three languages of a version, so we use EN as the canonical source.
+export function getAnswerKey(
+  version: Version
+): Record<
   string,
   { correct?: string[]; rubric?: string; type: string; points: number }
 > {
   const key: Record<string, { correct?: string[]; rubric?: string; type: string; points: number }> = {};
-  for (const q of (enContent as TestContent).questions) {
+  const source = tests[version].en;
+  for (const q of source.questions) {
     if (q.type === 'open') {
       key[q.id] = { rubric: q.rubric, type: q.type, points: q.points };
     } else {
@@ -36,11 +49,28 @@ export const LANGUAGES: { value: Lang; label: string }[] = [
   { value: 'uz', label: "O'zbekcha" },
 ];
 
+// Test versions presented to the candidate on the landing page.
+// `label` is shown in the dropdown; `description` is shown below as helper text.
+// These strings are intentionally English-only — they describe the role/track,
+// not the test content (which is fully localized per version).
+export const VERSIONS: { value: Version; label: string; description: string }[] = [
+  {
+    value: 'reinsurance',
+    label: 'Reinsurance (Trainee)',
+    description: 'Standard reinsurance underwriting test (16 questions).',
+  },
+  {
+    value: 'health',
+    label: 'Health (Assistant Manager)',
+    description: 'Health insurance / ДМС underwriting test (16 questions).',
+  },
+];
+
 export const TEST_DURATION_MINUTES = 90;
 
 export function shuffleQuestionOrder(questions: { id: string; part: string }[]): string[] {
   // Randomize WITHIN each part to keep section structure intact.
-  // Trainees still see Part I first, then II, III, IV, but question order
+  // Candidates still see Part I first, then II, III, IV, but question order
   // within each part is shuffled.
   const byPart: Record<string, string[]> = {};
   for (const q of questions) {
