@@ -12,7 +12,11 @@ export default function SubmittedPage() {
     const stored = localStorage.getItem('mig-last-lang');
     if (stored === 'en' || stored === 'ru' || stored === 'uz') setLang(stored);
   }, []);
-  const t = getTest(lang);
+  // The submitted page just shows generic "thank you" UI strings — these are
+  // identical across both versions of the test, so we hardcode the version
+  // here. (We don't have the attempt's version on this page anyway since
+  // sessionStorage is cleared once the test is submitted.)
+  const t = getTest('reinsurance', lang);
 
   return (
     <div className="min-h-screen flex flex-col">
