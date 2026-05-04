@@ -79,6 +79,11 @@ export interface Attempt {
   auto_score: number | null;       // sum of MCQ + AI-graded
   manual_score: number | null;     // admin-adjusted final
   status: 'in_progress' | 'submitted' | 'graded';
+  /** Status of the asynchronous AI grading job triggered on submit.
+   *  'complete' — done (or no open questions to grade)
+   *  'pending'  — AI grading still running in the background
+   *  'failed'   — AI grading errored; admin must grade manually */
+  grading_status: 'complete' | 'pending' | 'failed';
   question_order: string[]; // randomized order of question ids
 }
 
