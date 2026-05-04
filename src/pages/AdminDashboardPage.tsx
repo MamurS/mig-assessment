@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import BrandHeader from '@/components/BrandHeader';
 import { supabase } from '@/lib/supabase';
@@ -16,8 +16,16 @@ export default function AdminDashboardPage() {
   const [versionFilter, setVersionFilter] = useState<VersionFilter>('all');
   const [search, setSearch] = useState('');
 
+  // Keep a live ref of the current attempts so the polling interval can read
+  // the latest value without us needing to reset the interval on every render.
+  const attemptsRef = useRef<Attempt[]>([]);
+  attemptsRef.current = attempts;
+
+  // Initial load + light polling so the dashboard updates when AI grading finishes
+  // in the background. We only re-fetch if there's something pending.
   useEffect(() => {
     let mounted = true;
+
     async function load() {
       const { data, error } = await supabase
         .from('attempts')
@@ -33,8 +41,18 @@ export default function AdminDashboardPage() {
         setLoading(false);
       }
     }
+
     load();
-    return () => { mounted = false; };
+
+    // Poll every 5s while there are pending grades. Stops re-fetching once
+    // everything has finished grading. Using attemptsRef avoids stale-closure
+    // and avoids resetting the interval on every render.
+    const interval = setInterval(() => {
+      const hasPending = attemptsRef.current.some((a) => a.grading_status === 'pending');
+      if (hasPending) load();
+    }, 5000);
+
+    return () => { mounted = false; clearInterval(interval); };
   }, []);
 
   const filtered = useMemo(() => {
@@ -180,10 +198,15 @@ export default function AdminDashboardPage() {
                       </td>
                       <td className="px-5 py-3.5 text-right">
                         {score != null ? (
-                          <span className="font-mono font-medium text-ink-900">
-                            {score.toFixed(1)}
-                            <span className="text-ink-400">/100</span>
-                          </span>
+                          <div className="flex items-center justify-end gap-2">
+                            <span className="font-mono font-medium text-ink-900">
+                              {score.toFixed(1)}
+                              <span className="text-ink-400">/100</span>
+                            </span>
+                            {(a.grading_status === 'pending' || a.grading_status === 'failed') && (
+                              <GradingBadge status={a.grading_status} />
+                            )}
+                          </div>
                         ) : (
                           <span className="text-ink-400 text-sm">—</span>
                         )}
@@ -226,6 +249,29 @@ function VersionChip({ version }: { version: Version }) {
   return (
     <span className={`chip ${styles[version] ?? 'bg-ink-100 text-ink-700'}`}>
       {labels[version] ?? version}
+    </span>
+  );
+}
+
+function GradingBadge({ status }: { status: 'pending' | 'failed' }) {
+  if (status === 'pending') {
+    return (
+      <span
+        className="chip bg-amber-50 text-amber-700"
+        title="AI grading is still running. The score will update automatically once finished."
+      >
+        <span className="inline-block w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse mr-1.5" />
+        grading…
+      </span>
+    );
+  }
+  // status === 'failed'
+  return (
+    <span
+      className="chip bg-red-50 text-red-700"
+      title="AI grading failed for this attempt. Please review and grade open questions manually."
+    >
+      grading failed
     </span>
   );
 }
