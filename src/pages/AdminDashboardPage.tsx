@@ -3,15 +3,17 @@ import { useNavigate } from 'react-router-dom';
 import BrandHeader from '@/components/BrandHeader';
 import { supabase } from '@/lib/supabase';
 import { formatDate } from '@/lib/test-content';
-import type { Attempt } from '@/types';
+import type { Attempt, Version } from '@/types';
 
 type StatusFilter = 'all' | 'in_progress' | 'submitted' | 'graded';
+type VersionFilter = 'all' | Version;
 
 export default function AdminDashboardPage() {
   const navigate = useNavigate();
   const [attempts, setAttempts] = useState<Attempt[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState<StatusFilter>('all');
+  const [versionFilter, setVersionFilter] = useState<VersionFilter>('all');
   const [search, setSearch] = useState('');
 
   useEffect(() => {
@@ -38,18 +40,20 @@ export default function AdminDashboardPage() {
   const filtered = useMemo(() => {
     return attempts
       .filter((a) => filter === 'all' || a.status === filter)
+      .filter((a) => versionFilter === 'all' || a.version === versionFilter)
       .filter((a) =>
         !search.trim() ||
         a.candidate_name.toLowerCase().includes(search.toLowerCase()) ||
         a.candidate_email.toLowerCase().includes(search.toLowerCase())
       );
-  }, [attempts, filter, search]);
+  }, [attempts, filter, versionFilter, search]);
 
   function exportCSV() {
-    const headers = ['Name', 'Email', 'Language', 'Started', 'Submitted', 'Status', 'Auto Score', 'Final Score'];
+    const headers = ['Name', 'Email', 'Version', 'Language', 'Started', 'Submitted', 'Status', 'Auto Score', 'Final Score'];
     const rows = filtered.map((a) => [
       a.candidate_name,
       a.candidate_email,
+      a.version ?? 'reinsurance',
       a.lang.toUpperCase(),
       formatDate(a.started_at),
       formatDate(a.submitted_at),
@@ -109,6 +113,21 @@ export default function AdminDashboardPage() {
               </button>
             ))}
           </div>
+
+          <div className="flex gap-1 bg-ink-100 p-1 rounded-md">
+            {(['all', 'reinsurance', 'health'] as const).map((v) => (
+              <button
+                key={v}
+                onClick={() => setVersionFilter(v)}
+                className={`px-3 py-1.5 text-xs rounded font-medium transition-colors ${
+                  versionFilter === v ? 'bg-white text-ink-900 shadow-sm' : 'text-ink-500 hover:text-ink-700'
+                }`}
+              >
+                {v === 'all' ? 'All versions' : v.charAt(0).toUpperCase() + v.slice(1)}
+              </button>
+            ))}
+          </div>
+
           <input
             type="search"
             placeholder="Search by name or email…"
@@ -131,6 +150,7 @@ export default function AdminDashboardPage() {
               <thead className="bg-ink-50/50 border-b border-ink-100">
                 <tr className="text-left text-[11px] uppercase tracking-wider text-ink-500">
                   <th className="px-5 py-3 font-medium">Candidate</th>
+                  <th className="px-5 py-3 font-medium">Version</th>
                   <th className="px-5 py-3 font-medium">Lang</th>
                   <th className="px-5 py-3 font-medium">Submitted</th>
                   <th className="px-5 py-3 font-medium">Status</th>
@@ -149,6 +169,9 @@ export default function AdminDashboardPage() {
                       <td className="px-5 py-3.5">
                         <div className="font-medium text-ink-900">{a.candidate_name}</div>
                         <div className="text-xs text-ink-500">{a.candidate_email}</div>
+                      </td>
+                      <td className="px-5 py-3.5">
+                        <VersionChip version={a.version ?? 'reinsurance'} />
                       </td>
                       <td className="px-5 py-3.5 text-sm text-ink-600 uppercase">{a.lang}</td>
                       <td className="px-5 py-3.5 text-sm text-ink-600">{formatDate(a.submitted_at)}</td>
@@ -187,6 +210,22 @@ function StatusChip({ status }: { status: string }) {
   return (
     <span className={`chip ${styles[status] ?? 'bg-ink-100 text-ink-700'}`}>
       {label}
+    </span>
+  );
+}
+
+function VersionChip({ version }: { version: Version }) {
+  const styles: Record<Version, string> = {
+    reinsurance: 'bg-ink-100 text-ink-700',
+    health: 'bg-emerald-50 text-emerald-700',
+  };
+  const labels: Record<Version, string> = {
+    reinsurance: 'Reinsurance',
+    health: 'Health',
+  };
+  return (
+    <span className={`chip ${styles[version] ?? 'bg-ink-100 text-ink-700'}`}>
+      {labels[version] ?? version}
     </span>
   );
 }
