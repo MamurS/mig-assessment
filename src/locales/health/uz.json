@@ -71,8 +71,8 @@
       "text": "Ish beruvchi uchun tuzilgan korporativ ixtiyoriy tibbiy sug'urta (DMS) shartnomasida majburiy ishtirokchilar:",
       "options": [
         { "letter": "A", "text": "Faqat sug'urtalovchi va sug'urta qiluvchi" },
-        { "letter": "B", "text": "Sug'urtalovchi, sug'urta qiluvchi va tibbiy muassasa" },
-        { "letter": "C", "text": "Sug'urtalovchi, sug'urta qiluvchi, sug'urtalangan shaxs va tibbiy muassasa" },
+        { "letter": "B", "text": "Sug'urtalovchi, sug'urta qiluvchi va yordamchi tibbiy kompaniya" },
+        { "letter": "C", "text": "Sug'urtalovchi, sug'urta qiluvchi, sug'urtalangan shaxs va yordamchi tibbiy kompaniya" },
         { "letter": "D", "text": "Faqat sug'urtalovchi va sug'urtalangan shaxs" }
       ],
       "correct": ["C"]
