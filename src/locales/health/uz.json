@@ -1,0 +1,195 @@
+{
+  "lang": "uz",
+  "title": "Menejer yordamchisi — Tibbiy sug'urta",
+  "subtitle": "DMS anderraytingi — menejer yordamchisi uchun baholash",
+  "org": "Mosaic Insurance Group AJ",
+  "instructions": "Vaqt: 90 daqiqa. Jami: 100 ball. Kalkulyator ruxsat etiladi; internet va materiallar — ta'qiqlanadi. Tanlovli savollarda bitta (yoki ko'rsatilgan joyda ikkita) javobni tanlang. Ochiq savollarda fikrlash jarayonini aniq yozing — yakuniy raqam noto'g'ri bo'lsa ham, to'g'ri mantiq uchun qisman ball beriladi.",
+  "partLabels": {
+    "I": "I qism — Mantiqiy fikrlash (18 ball)",
+    "II": "II qism — Tibbiy sug'urta tamoyillari (39 ball)",
+    "III": "III qism — O'zbekiston bozori va qonunchiligi (27 ball)",
+    "IV": "IV qism — Tibbiy sug'urta anderrayting keyslari (16 ball)"
+  },
+  "ui": {
+    "candidate_name": "F.I.O.",
+    "candidate_email": "Elektron pochta",
+    "start": "Testni boshlash",
+    "next": "Keyingi",
+    "prev": "Oldingi",
+    "submit": "Testni topshirish",
+    "submit_confirm": "Testni topshirasizmi? Bundan keyin javoblarni o'zgartirib bo'lmaydi.",
+    "time_remaining": "Qolgan vaqt",
+    "select_lang": "Til",
+    "welcome": "Xush kelibsiz",
+    "welcome_body": "Iltimos, ma'lumotlaringizni kiriting va tilni tanlang. Test boshlangach 90 daqiqa beriladi.",
+    "open_answer_placeholder": "Javobingizni shu yerga yozing…",
+    "submitting": "Yuborilmoqda va baholanmoqda…",
+    "submitted_title": "Test topshirildi",
+    "submitted_body": "Rahmat. Javoblaringiz qayd etildi. Rahbar natijalarni ko'rib chiqib, siz bilan bog'lanadi.",
+    "error": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring.",
+    "required": "Bu maydon to'ldirilishi shart.",
+    "invalid_email": "Iltimos, to'g'ri elektron pochta manzilini kiriting.",
+    "already_taken": "Bu pochta bilan test allaqachon topshirilgan.",
+    "page_label": "Savol"
+  },
+  "questions": [
+    {
+      "id": "q1", "number": 1, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "Barcha sertifikatlangan syurveyerlar zarar dalolatnomalarini imzolash huquqiga ega. Imzolash huquqiga ega bo'lgan ba'zi shaxslar sug'urtalovchining xodimi emas. Hech bir tashqi maslahatchi sug'urtalovchining xodimi emas. Qaysi xulosa MAJBURIY ravishda to'g'ri?",
+      "options": [
+        { "letter": "A", "text": "Barcha sertifikatlangan syurveyerlar — tashqi maslahatchilar." },
+        { "letter": "B", "text": "Ba'zi sertifikatlangan syurveyerlar tashqi maslahatchi bo'lishi mumkin." },
+        { "letter": "C", "text": "Hech bir sertifikatlangan syurveyer tashqi maslahatchi emas." },
+        { "letter": "D", "text": "Barcha tashqi maslahatchilar sertifikatlangan syurveyerlardir." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q2", "number": 2, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "To'rtta da'vo — A, B, C, D — quyidagi shartlar bilan ma'lum tartibda ko'rib chiqilishi kerak: (i) B D dan oldin ko'rib chiqiladi; (ii) A C dan keyin darhol ko'rib chiqiladi; (iii) D oxirgi emas. Qaysi tartib mumkin?",
+      "options": [
+        { "letter": "A", "text": "B, C, A, D" },
+        { "letter": "B", "text": "C, A, B, D" },
+        { "letter": "C", "text": "B, D, C, A" },
+        { "letter": "D", "text": "C, A, D, B" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q3", "number": 3, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "Qayta sug'urtalovchi riskni faqat HAR IKKI shart bajarilganda qabul qiladi: 5 yillik zararlilik 60% dan past VA tsedent reytingi A- yoki undan yuqori. Arizada: 5 yillik zararlilik = 45%, tsedent reytingi = BBB+. Qaysi xulosa mantiqan to'g'ri?",
+      "options": [
+        { "letter": "A", "text": "Risk qabul qilinadi, chunki zararlilik sharti bajarilgan." },
+        { "letter": "B", "text": "Risk rad etiladi, chunki kamida bitta shart bajarilmagan." },
+        { "letter": "C", "text": "Risk qabul qilinadi, chunki zararlilik yaxshi bo'lganda BBB+ ham maqbul." },
+        { "letter": "D", "text": "Mavjud ma'lumotlar asosida aniqlash mumkin emas." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh1", "number": 4, "type": "mcq_single", "points": 7, "part": "II",
+      "text": "Ish beruvchi uchun tuzilgan korporativ ixtiyoriy tibbiy sug'urta (DMS) shartnomasida majburiy ishtirokchilar:",
+      "options": [
+        { "letter": "A", "text": "Faqat sug'urtalovchi va sug'urta qiluvchi" },
+        { "letter": "B", "text": "Sug'urtalovchi, sug'urta qiluvchi va tibbiy muassasa" },
+        { "letter": "C", "text": "Sug'urtalovchi, sug'urta qiluvchi, sug'urtalangan shaxs va tibbiy muassasa" },
+        { "letter": "D", "text": "Faqat sug'urtalovchi va sug'urtalangan shaxs" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "qh2", "number": 5, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Standart korporativ DMS polisiga ODATDA qaysi xizmatlar to'plami kiradi?",
+      "options": [
+        { "letter": "A", "text": "Faqat statsionar tibbiy yordam va jarrohlik amaliyotlari" },
+        { "letter": "B", "text": "Ambulator-poliklinik yordam, shoshilinch va rejali statsionar yordam, diagnostika, stomatologiya (cheklangan hajmda)" },
+        { "letter": "C", "text": "Cheklovsiz barcha tibbiy xizmatlar, jumladan kosmetologiya va plastik jarrohlik" },
+        { "letter": "D", "text": "Faqat profilaktik ko'riklar va emlash" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh3", "number": 6, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "DMS shartnomasida «sug'urta summasi» nimani anglatadi?",
+      "options": [
+        { "letter": "A", "text": "Sug'urta qiluvchi to'laydigan sug'urta mukofoti summasi" },
+        { "letter": "B", "text": "Sug'urtalangan shaxsning oylik to'lov miqdori" },
+        { "letter": "C", "text": "Sug'urtalovchining shartnoma muddati davomida shartnoma bo'yicha to'laydigan to'lovlarning maksimal jami miqdori" },
+        { "letter": "D", "text": "Hamkor klinikaning narxlar ro'yxatidagi bitta tibbiy xizmat narxi" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "qh4", "number": 7, "type": "mcq_single", "points": 7, "part": "II",
+      "text": "Quyidagi voqealardan qaysi biri standart korporativ DMS shartnomasida ENG KO'P holatlarda qoplanmaydigan istisno hisoblanadi?",
+      "options": [
+        { "letter": "A", "text": "O'tkir nafas yo'llari kasalligi" },
+        { "letter": "B", "text": "Ishga ketayotganda olingan jarohat" },
+        { "letter": "C", "text": "Alkogol yoki narkotik mastligi natijasida yuzaga kelgan kasalliklarni davolash" },
+        { "letter": "D", "text": "Terapevt bilan rejali maslahat" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "qh5", "number": 8, "type": "mcq_single", "points": 7, "part": "II",
+      "text": "Quyidagi omillardan qaysi biri korporativ DMS polisining narxiga BEVOSITA TA'SIR QILMAYDI?",
+      "options": [
+        { "letter": "A", "text": "Sug'urtalanganlarning yosh va jins tarkibi" },
+        { "letter": "B", "text": "Dasturga kiritilgan tibbiy muassasalar ro'yxati va ularning narx toifasi" },
+        { "letter": "C", "text": "Jamoaning zararlilik tarixi (oldingi davrlardagi loss ratio)" },
+        { "letter": "D", "text": "Sug'urta qiluvchining huquqiy shakli (MChJ, AJ, YaT)" }
+      ],
+      "correct": ["D"]
+    },
+    {
+      "id": "qh6", "number": 9, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "DMS shartnomasida «franshiza» nima?",
+      "options": [
+        { "letter": "A", "text": "Zararsiz yil uchun sug'urta qiluvchiga beriladigan chegirma" },
+        { "letter": "B", "text": "Sug'urtalovchining qoplashi boshlanguniga qadar sug'urtalangan shaxs o'z hisobidan to'laydigan tibbiy xizmat xarajatlarining bir qismi" },
+        { "letter": "C", "text": "Sug'urta agentining komissiyasi" },
+        { "letter": "D", "text": "Sug'urtalovchining katastrofik zararlarni qoplash uchun zaxirasi" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh7", "number": 10, "type": "mcq_single", "points": 7, "part": "III",
+      "text": "O'zbekiston Respublikasining «Sug'urta faoliyati to'g'risida»gi qonuniga muvofiq, sug'urtalovchining bitta risk bo'yicha maksimal o'z ushlanmasi odatda quyidagicha cheklanadi:",
+      "options": [
+        { "letter": "A", "text": "Sug'urtalovchining to'langan ustav kapitalining 5%" },
+        { "letter": "B", "text": "Sug'urtalovchining o'z mablag'larining (kapital + zaxiralar) 10%" },
+        { "letter": "C", "text": "Yalpi yig'ilgan mukofotning 25%" },
+        { "letter": "D", "text": "Qonunda belgilanmagan" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh8", "number": 11, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Qaysi davlat organi O'zbekiston sug'urta bozorining asosiy regulyatori bo'lib, to'lov qobiliyati, litsenziyalash va bozor xulq-atvori ustidan nazoratni amalga oshiradi?",
+      "options": [
+        { "letter": "A", "text": "O'zbekiston Respublikasi Markaziy banki" },
+        { "letter": "B", "text": "O'zbekiston Respublikasi Prezidenti huzuridagi Istiqbolli loyihalar milliy agentligi (NAPP, sobiq NAPU)" },
+        { "letter": "C", "text": "Davlat soliq qo'mitasi" },
+        { "letter": "D", "text": "Iqtisodiyot va moliya vazirligi" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh9", "number": 12, "type": "mcq_single", "points": 7, "part": "III",
+      "text": "O'zbekiston Respublikasida ixtiyoriy tibbiy sug'urta faoliyatini amalga oshirish uchun sug'urta tashkiloti:",
+      "options": [
+        { "letter": "A", "text": "Alohida litsenziyaga muhtoj emas — sug'urta faoliyati bo'yicha umumiy litsenziya yetarli" },
+        { "letter": "B", "text": "Regulyator tomonidan beriladigan «tibbiy sug'urta» sinfini o'z ichiga olgan ixtiyoriy sug'urta (umumiy sug'urta) bo'yicha litsenziyani olishi shart" },
+        { "letter": "C", "text": "Sog'liqni saqlash vazirligidan litsenziya olishi shart" },
+        { "letter": "D", "text": "Sug'urta qiluvchi davlat tashkiloti bo'lsa, litsenziyalashdan ozod qilingan" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh10", "number": 13, "type": "mcq_single", "points": 7, "part": "III",
+      "text": "O'zbekiston Respublikasining shaxsiy ma'lumotlar va fuqarolar salomatligini muhofaza qilish to'g'risidagi qonunchiligiga muvofiq, DMS shartnomasi bo'yicha sug'urtalangan shaxslarning tibbiy ma'lumotlarini qayta ishlashda sug'urtalovchi:",
+      "options": [
+        { "letter": "A", "text": "Reklama maqsadlarida ma'lumotlarni uchinchi shaxslarga erkin uzatishi mumkin, chunki ular avtomatik ravishda anonimlashtiriladi" },
+        { "letter": "B", "text": "Shaxsiy ma'lumotlar subyektining roziligini olishga, tibbiy sirning maxfiyligini ta'minlashga va ma'lumotlarni faqat sug'urta shartnomasini bajarish maqsadlarida qayta ishlashga majbur" },
+        { "letter": "C", "text": "Moliyaviy institut sifatida maxfiylik tartibiga rioya qilishdan ozod qilingan" },
+        { "letter": "D", "text": "Sug'urtalanganning roziligisiz ish beruvchi-sug'urta qiluvchiga har qanday hajmdagi ma'lumotlarni uzatishi mumkin" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "qh11", "number": 14, "type": "open", "points": 6, "part": "IV",
+      "text": "KEYS A: Korporativ dasturni anderrayting qilish.\n\n«AlmazStroy» MChJ (qurilish kompaniyasi, 240 xodim) korporativ DMS polisi uchun ariza topshirdi. Anketadan:\n• Yosh tarkibi: 38% — 40+ yosh, o'rtacha yosh 42\n• 55% xodim — qurilish maydonchasi ishchilari (elektr payvandchilar, montajchilar, oddiy ishchilar)\n• 45% — ma'muriy xodim (Toshkentdagi ofis)\n• O'tgan yili kompaniya sug'urtalovchini ikki marta o'zgartirgan\n• So'ralayotgan dastur — «Premium» (stomatologiya va rejali gospitalizatsiyani o'z ichiga oladi)\n• Bitta sug'urtalangan uchun javobgarlik chegarasi — 50 mln so'm\n\nYozma javob bering:\n\n(а) Ushbu jamoaning kutilayotgan zararliligini oshiruvchi UCHTA aniq risk omilini ayting va har birini asoslang. (3 ball)\n\n(б) Joriy etishni tavsiya qiladigan IKKITA tarkibiy chora (franshiza, hamkor to'lov, istisno, xizmat bo'yicha chegara, dasturni xodimlar toifalari bo'yicha bo'lish va h.k.)ni taklif qiling va har bir chora zararlilikka qanday ta'sir qilishini tushuntiring. (3 ball)",
+      "rubric": "To'liq ball (6). (а) [3 ball] Maqbul omillar: (1) qurilish maydonchasi ishchilarining yuqori ulushi — jarohat xavfining yuqoriligi (elektr payvandchilar, montajchilar, balandlikda ishlash, payvandlash uskunasi bilan ishlash); (2) o'rtacha yosh 42 va 38% 40 dan oshgan — surunkali kasalliklar (yurak-qon tomir, tayanch-harakat) yuqori darajasi; (3) bir yilda ikki marta sug'urtalovchini o'zgartirish — anti-selektsiya / hal qilinmagan to'lovlar to'planishi / norozilik belgisi; (4) stomatologiya va rejali gospitalizatsiya bilan «Premium» dastur — yuqori chastota + yuqori o'rtacha xarajat; (5) 50 mln so'm chegara — yuqori katastrofik xavf. UCHTA aniq omil asoslash bilan = 3 ball (har biri uchun 1). Asoslashsiz — har biri uchun 0,5. (б) [3 ball] Maqbul: (1) dasturni toifalar bo'yicha bo'lish — qurilish ishchilari uchun stomatologiyasiz yoki cheklangan stomatologiya pastki chegarasi bilan dastur; (2) rejali xizmatlar uchun 10–20% hamkor to'lov — ortiqcha foydalanishni kamaytiradi; (3) rejali gospitalizatsiya uchun franshiza — kichik manipulyativ murojaatlarni filtrlaydi; (4) pre-existing conditions uchun istisno yoki cheklov; (5) rejali gospitalizatsiya va stomatologiya uchun 2-3 oylik kutish davri — anti-selektsiyadan himoya. IKKITA aniq chora ta'sir mexanizmini tushuntirish bilan = 3 ball (har biri 1,5). Mexanizmni tushuntirmasdan — har biri uchun 0,5. Aniq bo'lmagan javoblar («tarifni oshirish») — 0 ball."
+    },
+    {
+      "id": "qh12", "number": 15, "type": "open", "points": 6, "part": "IV",
+      "text": "KEYS B: Zararni hal qilish.\n\nKorporativ DMS polisi bo'yicha sug'urtalangan shaxs hamkor klinikaga belidagi og'riq haqida shikoyat bilan murojaat qildi. Klinika MRT o'tkazdi va 28 mln so'mga jarrohlik aralashuvini (L4-L5 disk churrasi) taklif qildi. Sug'urta qiluvchi ushbu sug'urta hodisasi polis bilan qoplanadi yoki qoplanmasligini tasdiqlash uchun sug'urta kompaniyasiga murojaat qildi.\n\nMurojaatni ko'rib chiqishda, zararni hal qilish xizmati aniqladi:\n• Bemor 3 yil oldin ishga kirishda bel og'riqlari haqida shikoyatlar bermagan\n• Poliklinika tibbiy kartasida DMS shartnomasi tuzilishidan OLDIN bel og'rig'i bo'yicha murojaatlar qayd etilgan\n• DMS shartnomasi 4 oy oldin tuzilgan\n• Shartnomada «sug'urta muddati boshlanishidan oldin mavjud bo'lgan kasalliklar» (pre-existing conditions) ni istisno qiluvchi standart band bor\n\nYozma javob bering:\n\n(а) Zararni hal qilish xizmati qanday qaror qabul qilishi va qanday huquqiy va shartnoma asosida? (3 ball)\n\n(б) Sug'urtalangan yoki ish beruvchi tomonidan shikoyat qilinganda qaror huquqiy himoyalangan bo'lishi uchun sug'urtalovchi qaysi IKKITA hujjat/harakatni rasmiylashtirishi kerak? (3 ball)",
+      "rubric": "To'liq ball (6). (а) [3 ball] To'g'ri javob: shartnomaning pre-existing conditions istisno bandi asosida to'lashdan RAD ETISH (yoki holatni nostraxovoy deb tan olish), chunki bemorning bel og'rig'i bo'yicha poliklinikaga murojaatlari shartnoma kuchga kirgan sanadan OLDIN qayd etilgan. Huquqiy asos — O'zbekiston Respublikasi Fuqarolik kodeksining sug'urta to'g'risidagi moddalari (shartnoma erkinligi, shartnoma shartlarini bajarishning majburiyligi) + DMS shartnomasining aniq bandi. To'liq 3 ball: (1) qaror «rad etish»/«nostraxovoy» deb ko'rsatish, (2) shartnomaning pre-existing istisno bandiga havola, (3) huquqiy asosga (shartnoma/FK) havola. 3 dan 2 element bo'lsa 2 ball. Faqat «rad etish» asoslashsiz — 1 ball. (б) [3 ball] Maqbul: (1) sug'urtalangan va sug'urta qiluvchiga shartnomaning aniq bandiga havola va tasdiqlovchi tibbiy hujjatlarni ilova qilgan holda yozma asoslangan rad etish xati; (2) shartnoma sanasidan OLDIN murojaatlar qayd etilgan poliklinika tibbiy kartasi nusxasi (bemor roziligi bilan yoki tibbiy muassasa orqali olingan); (3) sug'urtalovchining tibbiy ekspertining sabab-oqibat aloqasi to'g'risidagi hisoboti/xulosasi; (4) sug'urta hodisasini tekshirish bo'yicha ichki dalolatnoma; (5) ish beruvchi-sug'urta qiluvchini qabul qilingan qaror haqida xabardor qilish. IKKITA aniq hujjat/harakat = 3 ball (har biri 1,5). Aniq emas («rad etishni rasmiylashtirish») QANDAY ekanligini ko'rsatmasdan — 1 ball."
+    },
+    {
+      "id": "qh13", "number": 16, "type": "open", "points": 4, "part": "IV",
+      "text": "KEYS C: Zararlilikni hisoblash va tarif bo'yicha tavsiya.\n\nKorporativ mijoz sug'urtalashning ikkinchi yilida. Birinchi yil ma'lumotlari:\n• Sug'urta qiluvchi tomonidan to'langan mukofot (netto): 480 mln so'm\n• Sug'urtalovchi tomonidan amalga oshirilgan tibbiy to'lovlar: 612 mln so'm\n• Ish yuritish xarajatlari: mukofotning 12%\n\nYozma javob bering:\n\n(а) Birinchi yil uchun loss ratio (zararlilik koeffitsienti) va combined ratio ni hisoblang. Hisobni ko'rsating. (2 ball)\n\n(б) Natija asosida ikkinchi yil uchun tarif bo'yicha asoslangan tavsiya bering — aniq foiz oshish va tarif oshirishdan tashqari taklif qiladigan KAMIDA IKKITA qo'shimcha chora. (2 ball)",
+      "rubric": "To'liq ball (4). (а) [2 ball] Loss ratio = to'lovlar / mukofot = 612 / 480 = 127,5%. Combined ratio = loss ratio + expense ratio = 127,5% + 12% = 139,5%. Hisob ko'rsatilgan ikkala ko'rsatkich uchun to'liq 2 ball. Faqat bitta ko'rsatkich to'g'ri yoki to'g'ri usul arifmetik xatolik bilan — 1 ball. Hisob ko'rsatilmagan yoki ikkala ko'rsatkich noto'g'ri — 0 ball. (б) [2 ball] Asoslangan tavsiya: tarif taxminan 40–50% ga oshirish (ortiqcha to'lovlarni qoplash + marjani tiklash uchun). 30–60% diapazoni asoslash bilan qabul qilinadi. Qo'shimcha choralar (kamida 2 ta): (1) franshiza yoki hamkor to'lovni joriy qilish/oshirish; (2) hamkor klinikalar ro'yxatini arzonroqlariga qayta ko'rib chiqish; (3) eng qimmat xizmatlarni istisno qilish (masalan, rejali stomatologiya); (4) rejali muolajalar uchun kutish davri; (5) ayrim xizmatlar uchun pastki chegaralar (masalan, MRT, KT); (6) da'volar auditi va to'lovlarning asosliligini tekshirish; (7) anti-selektsiyani aniqlash uchun to'lovlar tarkibi tahlili. Aniq foiz VA 2 ta aniq chora uchun to'liq 2 ball. Faqat tarif oshishi choralar yo'q YOKI faqat choralar foizsiz — 1 ball. Aniq foiz ham choralar ham yo'q — 0 ball."
+    }
+  ]
+}
