@@ -1,0 +1,195 @@
+{
+  "lang": "en",
+  "title": "Insurance Trainee Assessment",
+  "subtitle": "Underwriting & Reinsurance — Entry-Level Test",
+  "org": "Mosaic Insurance Group JSC",
+  "instructions": "Time limit: 90 minutes. Total: 100 points. Calculators allowed; no internet, no notes. For multiple-choice questions, select one (or two where indicated) answer. For open-ended questions, write your reasoning clearly — partial credit is awarded for correct logic even if the final number is off.",
+  "partLabels": {
+    "I": "Part I — Logical Reasoning (18 points)",
+    "II": "Part II — Insurance & Reinsurance Principles (36 points)",
+    "III": "Part III — Uzbekistan Market & Legislation (24 points)",
+    "IV": "Part IV — International Underwriting Cases (22 points)"
+  },
+  "ui": {
+    "candidate_name": "Full name",
+    "candidate_email": "Email address",
+    "start": "Start test",
+    "next": "Next",
+    "prev": "Previous",
+    "submit": "Submit test",
+    "submit_confirm": "Submit your test? You cannot change answers after this.",
+    "time_remaining": "Time remaining",
+    "select_lang": "Language",
+    "welcome": "Welcome",
+    "welcome_body": "Please enter your details and select a language. The test takes 90 minutes once started.",
+    "open_answer_placeholder": "Write your answer here…",
+    "submitting": "Submitting and grading…",
+    "submitted_title": "Test submitted",
+    "submitted_body": "Thank you. Your responses have been recorded. Your trainer will review the results and follow up with you.",
+    "error": "Something went wrong. Please try again.",
+    "required": "This field is required.",
+    "invalid_email": "Please enter a valid email.",
+    "already_taken": "A test has already been completed with this email.",
+    "page_label": "Question"
+  },
+  "questions": [
+    {
+      "id": "q1", "number": 1, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "All certified surveyors are authorised to sign loss reports. Some authorised signatories are not employed by the insurer. No external consultant is employed by the insurer. Which conclusion MUST be true?",
+      "options": [
+        { "letter": "A", "text": "All certified surveyors are external consultants." },
+        { "letter": "B", "text": "Some certified surveyors may be external consultants." },
+        { "letter": "C", "text": "No certified surveyor is an external consultant." },
+        { "letter": "D", "text": "All external consultants are certified surveyors." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q2", "number": 2, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "Four claims — A, B, C, D — must be processed in some order under these rules: (i) B is processed before D. (ii) A is processed immediately after C. (iii) D is not last. Which order is possible?",
+      "options": [
+        { "letter": "A", "text": "B, C, A, D" },
+        { "letter": "B", "text": "C, A, B, D" },
+        { "letter": "C", "text": "B, D, C, A" },
+        { "letter": "D", "text": "C, A, D, B" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q3", "number": 3, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "A reinsurer accepts a risk only if BOTH the 5-year loss ratio is below 60% AND the cedent's rating is A- or higher. A submission shows: 5-year loss ratio = 45%, cedent rating = BBB+. Which statement is logically correct?",
+      "options": [
+        { "letter": "A", "text": "The risk will be accepted, because the loss ratio condition is met." },
+        { "letter": "B", "text": "The risk will be declined, because at least one required condition fails." },
+        { "letter": "C", "text": "The risk will be accepted, because BBB+ is acceptable when loss ratio is good." },
+        { "letter": "D", "text": "Cannot be determined from the information given." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q4", "number": 4, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Which of the following best defines a \"deductible\" in a property policy?",
+      "options": [
+        { "letter": "A", "text": "The maximum amount the insurer will pay for any one loss." },
+        { "letter": "B", "text": "The portion of each loss the insured retains before the insurer pays." },
+        { "letter": "C", "text": "The reinsurance commission paid back to the cedent." },
+        { "letter": "D", "text": "The premium loading applied for high-risk occupancies." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q5", "number": 5, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "A treaty under which the reinsurer pays a fixed share of every loss above a per-risk attachment point, up to a contractual limit, is called:",
+      "options": [
+        { "letter": "A", "text": "Quota Share treaty" },
+        { "letter": "B", "text": "Surplus treaty" },
+        { "letter": "C", "text": "Excess of Loss (XoL) per risk" },
+        { "letter": "D", "text": "Stop Loss treaty" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q6", "number": 6, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "The principle of \"utmost good faith\" (uberrimae fidei) requires that:",
+      "options": [
+        { "letter": "A", "text": "The insurer must pay every claim regardless of policy terms." },
+        { "letter": "B", "text": "The insured must disclose all material facts known to them when applying for cover." },
+        { "letter": "C", "text": "The reinsurer can audit the cedent at any time without notice." },
+        { "letter": "D", "text": "Only the insurer is bound by the duty of disclosure." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q7", "number": 7, "type": "mcq_multi", "points": 6, "part": "II",
+      "text": "Which TWO of the following are forms of proportional reinsurance? (Select two.)",
+      "options": [
+        { "letter": "A", "text": "Quota Share" },
+        { "letter": "B", "text": "Catastrophe XoL" },
+        { "letter": "C", "text": "Surplus" },
+        { "letter": "D", "text": "Stop Loss" }
+      ],
+      "correct": ["A", "C"]
+    },
+    {
+      "id": "q8", "number": 8, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Subrogation is the right of:",
+      "options": [
+        { "letter": "A", "text": "The insured to claim from multiple insurers for the same loss." },
+        { "letter": "B", "text": "The insurer to recover paid claim amounts from the party legally responsible for the loss." },
+        { "letter": "C", "text": "The reinsurer to refuse a claim if premium is unpaid." },
+        { "letter": "D", "text": "The broker to retain unearned commission." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q9", "number": 9, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "A self-insured retention (SIR) differs from a deductible primarily because:",
+      "options": [
+        { "letter": "A", "text": "A deductible is always larger than an SIR." },
+        { "letter": "B", "text": "An SIR is paid by the insurer first and reimbursed by the insured later." },
+        { "letter": "C", "text": "Under an SIR the insured handles and pays losses within the retention; the insurer's limit sits above it." },
+        { "letter": "D", "text": "There is no practical difference; the terms are interchangeable in Uzbek law." }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q10", "number": 10, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Under the Law of the Republic of Uzbekistan \"On Insurance Activity\", an insurer's maximum retention on a single risk is generally limited to:",
+      "options": [
+        { "letter": "A", "text": "5% of the insurer's paid-in charter capital" },
+        { "letter": "B", "text": "10% of the insurer's own funds (capital + reserves)" },
+        { "letter": "C", "text": "25% of gross written premium" },
+        { "letter": "D", "text": "There is no statutory limit; it is determined by the insurer's own underwriting guidelines" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q11", "number": 11, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Which Uzbek state body is the primary regulator of the insurance market and supervises solvency, licensing, and market conduct?",
+      "options": [
+        { "letter": "A", "text": "Central Bank of the Republic of Uzbekistan (CBU)" },
+        { "letter": "B", "text": "National Agency of Perspective Projects under the President of the Republic of Uzbekistan (NAPP, former NAPU)" },
+        { "letter": "C", "text": "State Tax Committee" },
+        { "letter": "D", "text": "Ministry of Economy and Finance" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q12", "number": 12, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Which line of insurance is COMPULSORY for legal entities operating hazardous production facilities in Uzbekistan?",
+      "options": [
+        { "letter": "A", "text": "Directors & Officers Liability (D&O)" },
+        { "letter": "B", "text": "Civil liability of the operator of a hazardous production facility" },
+        { "letter": "C", "text": "Trade Credit Insurance" },
+        { "letter": "D", "text": "Marine Cargo Insurance" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q13", "number": 13, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "For a property risk where the sum insured exceeds the insurer's maximum retention, the underwriter must:",
+      "options": [
+        { "letter": "A", "text": "Decline the risk outright." },
+        { "letter": "B", "text": "Issue the policy and absorb the excess on the insurer's own balance sheet." },
+        { "letter": "C", "text": "Place the excess into facultative or treaty reinsurance before binding cover." },
+        { "letter": "D", "text": "Split the policy into multiple smaller policies issued to the same client." }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q14", "number": 14, "type": "open", "points": 9, "part": "IV",
+      "text": "CASE A — PROPERTY (MENA). A textile mill in Alexandria, Egypt. Total Sum Insured = USD 120,000,000, EML = 40% of TSI. Please answer the three parts below:\n\n(a) Calculate the EML in USD. Show the calculation. (3 pts)\n\n(b) The insurer's maximum line per risk is USD 1,000,000. The cedent is placing 70% of the risk on the facultative market. What percentage share of that 70% placement should the insurer take in order to fully use its USD 1,000,000 line? Show the calculation. Hint: line ÷ (70% of TSI) × 100. (3 pts)\n\n(c) Beyond the slip itself, name TWO additional pieces of information you would request from the broker before quoting. Examples to consider: loss history, fire protection details, building separation, BI methodology, surveyor reports, neighbouring exposures. Pick any two and briefly state why each matters. (3 pts)",
+      "rubric": "Full marks (9 pts). (a) EML = 40% × $120M = $48,000,000 (3 pts; 1 pt for correct method even if arithmetic wrong). (b) Line / (70% of TSI) = 1,000,000 / 84,000,000 ≈ 1.19%. Award full 3 pts for that calculation. Also accept 1M / (70% × EML) = 1M / 33.6M ≈ 2.98% if reasoning is shown. 1 pt for correct setup with arithmetic error. (c) Acceptable items: COPE info (construction/occupancy/protection/exposure), 5-10 yr loss history, fire protection (sprinklers/hydrants/distance to brigade), separation between buildings, BI methodology and indemnity period, surveyor report, cedent's retention/treaty arrangements, neighbouring exposures, BCP, EML methodology. TWO sensible items with brief justification = 3 pts (1.5 each)."
+    },
+    {
+      "id": "q15", "number": 15, "type": "open", "points": 9, "part": "IV",
+      "text": "CASE B — CONSTRUCTION (SE Asia). A 28-month CAR + EAR submission for a 450 MW gas-fired power plant in Vietnam, project value USD 480 million. The site is 8 km from the coast in a typhoon-exposed zone.\n\nIdentify THREE specific underwriting concerns for this risk and state how each could be addressed. Use any THREE of the categories below as inspiration:\n\n• Natural perils (typhoon, storm surge, flood)\n• Testing & commissioning of the gas turbine\n• Heavy lifts (turbine, generator)\n• Hot work / welding during erection\n• Local subcontractor quality\n\nFor each concern, name a specific mitigant from this list: sub-limit, deductible, exclusion, warranty, or premium loading. Be concrete — avoid vague answers like \"weather\" or \"safety\".",
+      "rubric": "Full marks (9 pts; 3 per concern). Each concern must be (1) specific to the risk and (2) paired with one mitigant type. Acceptable: (1) Typhoon/windstorm at 8km coast → CAT sub-limit + windstorm % deductible + cyclone-preparedness warranty; (2) Storm surge / flood given coastal proximity → flood sub-limit, separate flood deductible; (3) Testing & commissioning of gas turbine → T&C sub-limit, higher T&C deductible, LEG2/LEG3 defects clause; (4) Heavy lifts → lifting warranty, transit-to-site sub-limit, named perils for heavy lift; (5) Hot work → hot work warranty; (6) Subcontractor quality / Vietnamese local construction standards → surveyor warranty, PM qualifications. Reject vague answers like 'weather', 'workers'. Each concern without a specific mitigant loses ~half its marks."
+    },
+    {
+      "id": "q18", "number": 16, "type": "open", "points": 4, "part": "IV",
+      "text": "In one or two sentences each, explain the difference between:\n\n(a) PML (Probable Maximum Loss) and EML (Estimated Maximum Loss)\n\n(b) Facultative reinsurance and Treaty reinsurance\n\n(c) Coinsurance clause and Average clause",
+      "rubric": "Full marks (4 pts). (a) PML = largest loss reasonably expected with safeguards working; EML = more conservative figure assuming some safeguards fail. PML ≤ EML in most usage (1.5 pts). (b) Facultative = risk-by-risk individually negotiated; treaty = automatic, all risks within agreed parameters under one contract (1.5 pts). (c) Coinsurance (US) and average clause (UK/CIS) similar in effect: when underinsured, claim payment reduced proportionally to ratio insured-value / actual-value (1 pt)."
+    }
+  ]
+}
