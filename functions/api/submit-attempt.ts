@@ -239,6 +239,8 @@ async function backgroundGradeOpenQuestions(
 // ---------------------------------------------------------------------------
 export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { request, env } = context;
+  const t0 = Date.now();
+  const log = (msg: string) => console.log(`[submit-attempt +${Date.now() - t0}ms] ${msg}`);
 
   let body: Body;
   try {
@@ -251,6 +253,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   if (!attemptId || typeof attemptId !== 'string') {
     return errorResponse('missing_attempt_id');
   }
+  log(`start attemptId=${attemptId}`);
 
   // 1. Load attempt
   const attempts = await sbSelect<AttemptRow>(
@@ -260,6 +263,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   );
   const attempt = attempts[0];
   if (!attempt) return errorResponse('attempt_not_found', 404);
+  log(`attempt loaded`);
 
   // Idempotent: if already submitted/graded, just return ok
   if (attempt.status !== 'in_progress') {
@@ -300,6 +304,8 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     }
   }
 
+  log(`MCQ scored=${mcqUpdates.length} open=${openAnswers.length} mcqTotal=${mcqTotal}`);
+
   // 4. Write MCQ scores synchronously (all in parallel, but we await before responding).
   await Promise.all(
     mcqUpdates.map((u) =>
@@ -309,6 +315,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       })
     )
   );
+  log(`MCQ writes done`);
 
   // 5. Mark attempt as submitted with the partial (MCQ-only) auto_score.
   // grading_status='pending' tells admin UI that AI grading is still running.
@@ -321,6 +328,7 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
     submitted_at: submittedAt,
     grading_status: initialStatus,
   });
+  log(`attempt marked submitted, returning to candidate`);
 
   // 6. Kick off background AI grading (non-blocking).
   // context.waitUntil() lets the Worker keep running this task after we return.
