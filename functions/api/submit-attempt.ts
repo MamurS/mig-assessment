@@ -1,5 +1,5 @@
 import { Env, jsonResponse, errorResponse, sbSelect, sbUpdate } from './_shared';
-import { ANSWER_KEY } from './_answerkey';
+import { ANSWER_KEY, type Version } from './_answerkey';
 
 interface Body {
   attemptId: string;
@@ -17,6 +17,7 @@ interface AttemptRow {
   id: string;
   candidate_email: string;
   lang: 'en' | 'ru' | 'uz';
+  version: Version;
   status: string;
 }
 
@@ -163,11 +164,11 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
     return errorResponse('missing_attempt_id');
   }
 
-  // 1. Load attempt
+  // 1. Load attempt (now includes version)
   const attempts = await sbSelect<AttemptRow>(
     env,
     'attempts',
-    `select=id,candidate_email,lang,status&id=eq.${encodeURIComponent(attemptId)}`
+    `select=id,candidate_email,lang,version,status&id=eq.${encodeURIComponent(attemptId)}`
   );
   const attempt = attempts[0];
   if (!attempt) return errorResponse('attempt_not_found', 404);
@@ -176,6 +177,14 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   if (attempt.status !== 'in_progress') {
     return jsonResponse({ ok: true, alreadyDone: true });
   }
+
+  // Resolve which answer key to use based on the attempt's version.
+  // Falls back to reinsurance if the field is null/unknown (defensive — for
+  // any rows created before the migration added the version column).
+  const version: Version = (attempt.version === 'health' || attempt.version === 'reinsurance')
+    ? attempt.version
+    : 'reinsurance';
+  const KEY = ANSWER_KEY[version];
 
   // 2. Load all answers for this attempt
   const answers = await sbSelect<AnswerRow>(
@@ -193,9 +202,9 @@ export const onRequestPost: PagesFunction<Env> = async ({ request, env }) => {
   const openTasks: Array<Promise<{ ans: AnswerRow; points: number; feedback: string }>> = [];
 
   for (const ans of answers) {
-    const key = ANSWER_KEY[ans.question_id];
+    const key = KEY[ans.question_id];
     if (!key) {
-      console.warn('Unknown question id:', ans.question_id);
+      console.warn(`Unknown question id for version ${version}:`, ans.question_id);
       continue;
     }
 
