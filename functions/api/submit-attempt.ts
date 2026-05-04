@@ -87,7 +87,7 @@ async function gradeOpenWithAI(
   const feedbackLang =
     lang === 'ru' ? 'Russian' : lang === 'uz' ? 'Uzbek (Latin script)' : 'English';
 
-  const prompt = `You are a strict but fair examiner grading a junior insurance underwriter's written answer against an internal rubric. Be precise and reference the rubric directly.
+  const prompt = `You are a fair and lenient examiner grading a junior insurance underwriter's written answer against an internal rubric. Be generous — these are entry-to-mid-level candidates and the goal is to identify whether they understand the concept, not to penalise minor imperfections.
 
 QUESTION:
 ${questionText}
@@ -98,13 +98,23 @@ ${rubric}
 CANDIDATE'S ANSWER:
 ${candidateAnswer}
 
+GRADING PHILOSOPHY — IMPORTANT:
+- Be GENEROUS overall. When in doubt between two scores, choose the higher one.
+- Award FULL marks for any answer that demonstrates correct understanding of the concept, even if expressed informally, briefly, or with imperfect terminology.
+- Reward correct REASONING and METHOD over precise wording or perfect detail.
+- Treat the rubric as a guide for what counts as a good answer, NOT as a strict checklist where every bullet must appear verbatim. If the candidate captures the spirit of the rubric, award full or near-full marks.
+
+ARITHMETIC ERRORS — DO NOT PENALISE:
+- Calculation/arithmetic mistakes do NOT lose marks. Award full marks for the calculation portion as long as the METHOD and APPROACH are correct.
+- If the candidate sets up the right formula or shows the right reasoning but arrives at a wrong number, give them the full points for that part.
+- Only deduct calculation marks if the candidate uses a fundamentally wrong method (e.g. uses combined ratio formula when asked for loss ratio).
+
 INSTRUCTIONS:
 - Award points strictly per the rubric. Maximum: ${maxPoints} points. Minimum: 0.
 - Half-point increments allowed (e.g. 0, 0.5, 1.0, 1.5, ...).
-- Vague or generic answers should lose marks even if directionally correct.
-- Calculation errors lose the calculation marks but candidate keeps method marks if logic is right.
+- A blank or "I don't know" answer gets 0. Anything that shows engagement with the question deserves at least partial credit.
 - Write feedback in ${feedbackLang}, addressing the candidate (you/вы/siz).
-- Feedback should: (1) state the score and why, (2) note what was correct, (3) note what was missing or wrong, (4) be 3-6 sentences total.
+- Feedback should: (1) state the score and why, (2) note what was correct, (3) note what could have been added or strengthened (frame as suggestion, not criticism), (4) be 3-6 sentences total, encouraging in tone.
 
 Respond ONLY with a single JSON object, no prose, no markdown, no code fences:
 {"points": <number>, "feedback": "<string>"}`;
