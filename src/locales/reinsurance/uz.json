@@ -1,0 +1,195 @@
+{
+  "lang": "uz",
+  "title": "Stajyorlar uchun test — sug'urta",
+  "subtitle": "Anderrayting va qayta sug'urta — boshlang'ich daraja",
+  "org": "«Mosaic Insurance Group» AJ",
+  "instructions": "Vaqt: 90 daqiqa. Jami: 100 ball. Kalkulyator ruxsat etiladi; internet va materiallar — ta'qiqlanadi. Tanlovli savollarda bitta (yoki ko'rsatilgan joyda ikkita) javobni tanlang. Ochiq savollarda fikrlash jarayonini aniq yozing — yakuniy raqam noto'g'ri bo'lsa ham, to'g'ri mantiq uchun qisman ball beriladi.",
+  "partLabels": {
+    "I": "I qism — Mantiqiy fikrlash (18 ball)",
+    "II": "II qism — Sug'urta va qayta sug'urta tamoyillari (36 ball)",
+    "III": "III qism — O'zbekiston bozori va qonunchiligi (24 ball)",
+    "IV": "IV qism — Xalqaro anderrayting keyslari (22 ball)"
+  },
+  "ui": {
+    "candidate_name": "F.I.O.",
+    "candidate_email": "Elektron pochta",
+    "start": "Testni boshlash",
+    "next": "Keyingi",
+    "prev": "Oldingi",
+    "submit": "Testni topshirish",
+    "submit_confirm": "Testni topshirasizmi? Bundan keyin javoblarni o'zgartirib bo'lmaydi.",
+    "time_remaining": "Qolgan vaqt",
+    "select_lang": "Til",
+    "welcome": "Xush kelibsiz",
+    "welcome_body": "Iltimos, ma'lumotlaringizni kiriting va tilni tanlang. Test boshlangach 90 daqiqa beriladi.",
+    "open_answer_placeholder": "Javobingizni shu yerga yozing…",
+    "submitting": "Yuborilmoqda va baholanmoqda…",
+    "submitted_title": "Test topshirildi",
+    "submitted_body": "Rahmat. Javoblaringiz qayd etildi. O'qituvchi natijalarni ko'rib chiqib, siz bilan bog'lanadi.",
+    "error": "Xatolik yuz berdi. Iltimos, qaytadan urinib ko'ring.",
+    "required": "Bu maydon to'ldirilishi shart.",
+    "invalid_email": "Iltimos, to'g'ri elektron pochta manzilini kiriting.",
+    "already_taken": "Bu pochta bilan test allaqachon topshirilgan.",
+    "page_label": "Savol"
+  },
+  "questions": [
+    {
+      "id": "q1", "number": 1, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "Barcha sertifikatlangan syurveyerlar zarar dalolatnomalarini imzolash huquqiga ega. Imzolash huquqiga ega bo'lgan ba'zi shaxslar sug'urtalovchining xodimi emas. Hech bir tashqi maslahatchi sug'urtalovchining xodimi emas. Qaysi xulosa MAJBURIY ravishda to'g'ri?",
+      "options": [
+        { "letter": "A", "text": "Barcha sertifikatlangan syurveyerlar — tashqi maslahatchilar." },
+        { "letter": "B", "text": "Ba'zi sertifikatlangan syurveyerlar tashqi maslahatchi bo'lishi mumkin." },
+        { "letter": "C", "text": "Hech bir sertifikatlangan syurveyer tashqi maslahatchi emas." },
+        { "letter": "D", "text": "Barcha tashqi maslahatchilar sertifikatlangan syurveyerlardir." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q2", "number": 2, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "To'rtta da'vo — A, B, C, D — quyidagi shartlar bilan ma'lum tartibda ko'rib chiqilishi kerak: (i) B D dan oldin ko'rib chiqiladi; (ii) A C dan keyin darhol ko'rib chiqiladi; (iii) D oxirgi emas. Qaysi tartib mumkin?",
+      "options": [
+        { "letter": "A", "text": "B, C, A, D" },
+        { "letter": "B", "text": "C, A, B, D" },
+        { "letter": "C", "text": "B, D, C, A" },
+        { "letter": "D", "text": "C, A, D, B" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q3", "number": 3, "type": "mcq_single", "points": 6, "part": "I",
+      "text": "Qayta sug'urtalovchi riskni faqat HAR IKKI shart bajarilganda qabul qiladi: 5 yillik zararlilik 60% dan past VA tsedent reytingi A- yoki undan yuqori. Arizada: 5 yillik zararlilik = 45%, tsedent reytingi = BBB+. Qaysi xulosa mantiqan to'g'ri?",
+      "options": [
+        { "letter": "A", "text": "Risk qabul qilinadi, chunki zararlilik sharti bajarilgan." },
+        { "letter": "B", "text": "Risk rad etiladi, chunki kamida bitta shart bajarilmagan." },
+        { "letter": "C", "text": "Risk qabul qilinadi, chunki zararlilik yaxshi bo'lganda BBB+ ham maqbul." },
+        { "letter": "D", "text": "Mavjud ma'lumotlar asosida aniqlash mumkin emas." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q4", "number": 4, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Mol-mulk sug'urtasi polisida «franshiza» (deductible) ni eng to'g'ri ta'riflaydigan javob:",
+      "options": [
+        { "letter": "A", "text": "Sug'urtalovchi bitta zarar bo'yicha to'laydigan maksimal summa." },
+        { "letter": "B", "text": "Sug'urtalovchi to'lashidan oldin sug'urtalanuvchining zimmasida qoladigan har bir zarar qismi." },
+        { "letter": "C", "text": "Tsedentga qaytariladigan qayta sug'urta komissiyasi." },
+        { "letter": "D", "text": "Yuqori riskli faoliyat uchun mukofotga qo'shilgan ustama." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q5", "number": 5, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Qayta sug'urtalovchi har bir zararning belgilangan ulushini risk bo'yicha biriktirish nuqtasidan yuqorida shartnoma limitigacha to'laydigan shartnoma:",
+      "options": [
+        { "letter": "A", "text": "Kvota shartnomasi (Quota Share)" },
+        { "letter": "B", "text": "Summalar ekstsedenti (Surplus)" },
+        { "letter": "C", "text": "Risk bo'yicha zarar ekstsedenti (Excess of Loss per risk)" },
+        { "letter": "D", "text": "Stop Loss" }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q6", "number": 6, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "«Eng yuqori vijdonlilik» (uberrimae fidei) tamoyili shuni talab qiladi:",
+      "options": [
+        { "letter": "A", "text": "Sug'urtalovchi har qanday zararni polis shartlaridan qat'i nazar to'lashi kerak." },
+        { "letter": "B", "text": "Sug'urtalanuvchi shartnoma tuzayotganda o'ziga ma'lum barcha muhim faktlarni oshkor qilishi kerak." },
+        { "letter": "C", "text": "Qayta sug'urtalovchi xohlagan vaqt ogohlantirishsiz tsedentni audit qilishi mumkin." },
+        { "letter": "D", "text": "Faqat sug'urtalovchi ma'lumot oshkor qilish majburiyatiga ega." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q7", "number": 7, "type": "mcq_multi", "points": 6, "part": "II",
+      "text": "Quyidagilardan IKKItasi proportsional qayta sug'urta shaklidir? (Ikkita javobni tanlang.)",
+      "options": [
+        { "letter": "A", "text": "Quota Share" },
+        { "letter": "B", "text": "Catastrophe XoL" },
+        { "letter": "C", "text": "Surplus" },
+        { "letter": "D", "text": "Stop Loss" }
+      ],
+      "correct": ["A", "C"]
+    },
+    {
+      "id": "q8", "number": 8, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "Subrogatsiya — bu quyidagi huquq:",
+      "options": [
+        { "letter": "A", "text": "Sug'urtalanuvchining bir zarar bo'yicha bir nechta sug'urtalovchidan tovon olish huquqi." },
+        { "letter": "B", "text": "Sug'urtalovchining to'langan tovonni zarar uchun javobgar shaxsdan undirib olish huquqi." },
+        { "letter": "C", "text": "Qayta sug'urtalovchining mukofot to'lanmaganda to'lovni rad etish huquqi." },
+        { "letter": "D", "text": "Brokerning to'lanmagan komissiyani ushlab qolish huquqi." }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q9", "number": 9, "type": "mcq_single", "points": 6, "part": "II",
+      "text": "O'z-o'zini sug'urtalash chegarasi (SIR) franshizadan asosan shu bilan farqlanadi:",
+      "options": [
+        { "letter": "A", "text": "Franshiza har doim SIR dan kattaroq bo'ladi." },
+        { "letter": "B", "text": "SIR ni avval sug'urtalovchi to'laydi, keyin sug'urtalanuvchi qoplaydi." },
+        { "letter": "C", "text": "SIR da sug'urtalanuvchi chegara ichidagi zararlarni o'zi tartibga soladi va to'laydi; sug'urtalovchi limiti undan yuqorida boshlanadi." },
+        { "letter": "D", "text": "Amaliy farq yo'q; O'zbekiston qonunchiligida atamalar o'zaro almashinadi." }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q10", "number": 10, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "O'zbekiston Respublikasining «Sug'urta faoliyati to'g'risida»gi qonuniga muvofiq, sug'urtalovchining bitta risk bo'yicha maksimal o'z ushlanmasi odatda quyidagicha cheklanadi:",
+      "options": [
+        { "letter": "A", "text": "Sug'urtalovchining to'langan ustav kapitalining 5%" },
+        { "letter": "B", "text": "Sug'urtalovchining o'z mablag'larining (kapital + zaxiralar) 10%" },
+        { "letter": "C", "text": "Yalpi yig'ilgan mukofotning 25%" },
+        { "letter": "D", "text": "Qonunda belgilanmagan; ichki anderrayting qoidalari bilan aniqlanadi" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q11", "number": 11, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Qaysi davlat organi O'zbekiston sug'urta bozorining asosiy regulyatori bo'lib, to'lov qobiliyati, litsenziyalash va bozor xulq-atvori ustidan nazoratni amalga oshiradi?",
+      "options": [
+        { "letter": "A", "text": "O'zbekiston Respublikasi Markaziy banki (MB)" },
+        { "letter": "B", "text": "O'zbekiston Respublikasi Prezidenti huzuridagi Istiqbolli loyihalar milliy agentligi (NAPP, sobiq NAPU)" },
+        { "letter": "C", "text": "Davlat soliq qo'mitasi" },
+        { "letter": "D", "text": "Iqtisodiyot va moliya vazirligi" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q12", "number": 12, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "O'zbekistonda xavfli ishlab chiqarish obyektlarini ekspluatatsiya qiluvchi yuridik shaxslar uchun qaysi sug'urta MAJBURIY?",
+      "options": [
+        { "letter": "A", "text": "Direktorlar va mansabdor shaxslar javobgarligi sug'urtasi (D&O)" },
+        { "letter": "B", "text": "Xavfli ishlab chiqarish obyektini ekspluatatsiya qiluvchi tashkilotning fuqarolik javobgarligi sug'urtasi" },
+        { "letter": "C", "text": "Savdo krediti sug'urtasi (TCI)" },
+        { "letter": "D", "text": "Dengiz yuklari sug'urtasi" }
+      ],
+      "correct": ["B"]
+    },
+    {
+      "id": "q13", "number": 13, "type": "mcq_single", "points": 6, "part": "III",
+      "text": "Mol-mulk riski bo'yicha sug'urta summasi sug'urtalovchining maksimal ushlanmasidan oshganda, anderrayter quyidagilardan birini bajarishi shart:",
+      "options": [
+        { "letter": "A", "text": "Riskni butunlay rad etish." },
+        { "letter": "B", "text": "Polis chiqarib, oshiqcha qismni o'z balansida qoldirish." },
+        { "letter": "C", "text": "Qoplama kuchga kirgunga qadar oshiqcha qismni fakultativ yoki obligator qayta sug'urtaga berish." },
+        { "letter": "D", "text": "Polisni bir mijozga bir nechta kichik polislarga bo'lish." }
+      ],
+      "correct": ["C"]
+    },
+    {
+      "id": "q14", "number": 14, "type": "open", "points": 9, "part": "IV",
+      "text": "KEYS A — MOL-MULK (MENA). Iskandariyadagi (Misr) to'qimachilik fabrikasi. Umumiy sug'urta summasi = USD 120 000 000, EML = sug'urta summasining 40%. Quyidagi uch qismga javob bering:\n\n(a) EML ni USD da hisoblang. Hisobni ko'rsating. (3 ball)\n\n(b) Sug'urtalovchining bir risk bo'yicha maksimal limiti — USD 1 000 000. Tsedent riskning 70% ini fakultativ bozorga joylashtiradi. Sug'urtalovchi USD 1 000 000 limitini to'liq ishlatish uchun shu 70%-li joylashtirishdan qancha ulushni (% da) olishi kerak? Hisobni ko'rsating. Maslahat: limit ÷ (sug'urta summasining 70%) × 100. (3 ball)\n\n(c) Slipdan tashqari brokerga kotirovkadan oldin beradigan IKKIta qo'shimcha savolni nomlang. Quyidagilardan tanlash mumkin: zararlar tarixi, yong'inga qarshi himoya, binolar orasidagi masofa, BI metodologiyasi, syurveyer hisoboti, qo'shni risklar. Istalgan ikkitasini tanlang va har biri nima uchun muhimligini qisqacha tushuntiring. (3 ball)",
+      "rubric": "To'liq ball (9). (a) EML = 40% × $120 mln = $48 000 000 (3 ball; metod to'g'ri lekin arifmetik xato bo'lsa — 1 ball). (b) Limit / (sug'urta summasining 70%) = 1 000 000 / 84 000 000 ≈ 1,19%. Bu hisob uchun to'liq 3 ball. Agar limit EML dan hisoblansa (1М / 33,6М ≈ 2,98%) — fikrlash ko'rsatilsa — qabul qilinadi. Postanovka to'g'ri, arifmetik xato bo'lsa — 1 ball. (c) Maqbul: COPE; 5–10 yillik zararlar tarixi; yong'inga qarshi himoya; binolar orasidagi masofa; BI metodologiyasi va indemnity period; syurveyer hisoboti; tsedent ushlanmalari va shartnomalari; qo'shni risklar. IKKI o'rinli javob qisqa asoslash bilan = 3 ball (1,5 har biri uchun)."
+    },
+    {
+      "id": "q15", "number": 15, "type": "open", "points": 9, "part": "IV",
+      "text": "KEYS B — QURILISH (JS Osiyo). Vetnamda 450 MVt gazli elektr stantsiyasini qurish bo'yicha 28 oyga mo'ljallangan CAR + EAR arizasi, loyiha qiymati USD 480 mln. Maydon sohildan 8 km masofada, tayfun zonasida joylashgan.\n\nShu risk uchun UCHta aniq anderrayting xavotirini sanab bering va har biri qanday yopilishi mumkinligini ko'rsating. Quyidagi kategoriyalardan istalgan UCHtasini ilhom sifatida ishlating:\n\n• Tabiiy ofatlar (tayfun, bo'ron suvi, toshqin)\n• Gaz turbinasini sinash va ishga tushirish\n• Og'ir yuklar (turbina, generator)\n• Payvandlash / hot work montaj davrida\n• Mahalliy subpudratchi sifati\n\nHar bir xavotir uchun aniq chora nomini ayting: sublimit, franshiza, istisno, kafolat (warranty) yoki mukofotga ustama. Aniq bo'ling — «ob-havo» yoki «xavfsizlik» kabi noaniq javoblardan saqlaning.",
+      "rubric": "To'liq ball (9; har xavotir uchun 3). Har bir xavotir (1) shu risk uchun aniq va (2) bitta chora bilan birga bo'lishi shart. Maqbullari: (1) Tayfun/shamol 8 km sohildan → CAT-sublimit + shamol % franshizasi + siklon tayyorgarligi warranty; (2) Bo'ron suvi/toshqin → toshqin sublimiti va alohida franshiza; (3) Gaz turbinasini sinash va ishga tushirish → T&C-sublimit, T&C bosqichida yuqori franshiza, LEG2/LEG3 ko'rib chiqish; (4) Og'ir yuklar → lifting warranty, transit sublimiti, named perils heavy lift; (5) Hot work → hot work warranty; (6) Subpudratchi sifati va Vetnam standartlari → surveyor warranty, PM talablari. «Ob-havo», «ishchilar» kabi noaniq javoblar — qabul qilinmaydi. Mos chorasiz har bir xavotir ~yarim ball yo'qotadi."
+    },
+    {
+      "id": "q18", "number": 16, "type": "open", "points": 4, "part": "IV",
+      "text": "Bir-ikki gap bilan har bir punktdagi farqni tushuntiring:\n\n(a) PML (Probable Maximum Loss) va EML (Estimated Maximum Loss)\n\n(b) Fakultativ va obligator qayta sug'urta\n\n(c) Coinsurance sharti va average clause sharti",
+      "rubric": "To'liq ball (4). (a) PML — ishlab turgan himoya vositalari sharoitida eng ko'p kutilgan zarar; EML — ba'zi himoya vositalari ishdan chiqishini taxmin qiluvchi konservativ baholash. PML ≤ EML (1,5 ball). (b) Fakultativ — har risk bo'yicha alohida muzokara; obligator — bitta shartnoma asosida avtomatik (1,5 ball). (c) Coinsurance (US) va average clause (UK/MDH) — amalda deyarli bir xil: kam-sug'urtalashda to'lov mutanosib kamayadi (1 ball)."
+    }
+  ]
+}
