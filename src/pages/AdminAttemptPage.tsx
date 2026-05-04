@@ -30,7 +30,7 @@ export default function AdminAttemptPage() {
     return () => { mounted = false; };
   }, [attemptId]);
 
-  const test = attempt ? getTest(attempt.lang) : null;
+  const test = attempt ? getTest(attempt.version ?? 'reinsurance', attempt.lang) : null;
 
   const questionMap = useMemo(() => {
     if (!test) return new Map<string, Question>();
