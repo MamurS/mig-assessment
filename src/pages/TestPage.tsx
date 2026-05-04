@@ -5,6 +5,7 @@ import { getTest, formatDuration } from '@/lib/test-content';
 import QuestionRenderer from '@/components/QuestionRenderer';
 import BrandHeader from '@/components/BrandHeader';
 import AntiCheatGuard from '@/components/AntiCheatGuard';
+import ConfirmModal from '@/components/ConfirmModal';
 import type { Lang, Question, Version } from '@/types';
 
 interface AttemptState {
@@ -27,6 +28,7 @@ export default function TestPage() {
   const [submitting, setSubmitting] = useState(false);
   const [submitErr, setSubmitErr] = useState<string | null>(null);
   const [secondsLeft, setSecondsLeft] = useState<number>(0);
+  const [showConfirm, setShowConfirm] = useState(false);
 
   const t = useMemo(
     () => (attemptState ? getTest(attemptState.version ?? 'reinsurance', attemptState.lang) : null),
@@ -48,7 +50,8 @@ export default function TestPage() {
       const left = Math.max(0, Math.floor((ends - now) / 1000));
       setSecondsLeft(left);
       if (left === 0) {
-        handleSubmit(true);
+        // Time's up — auto-submit without confirmation
+        doSubmit();
       }
     }
     tick();
@@ -87,15 +90,17 @@ export default function TestPage() {
     return () => clearTimeout(handle);
   }, [responses, currentIdx, orderedQuestions, saveAnswer]);
 
-  async function handleSubmit(auto = false) {
+  // Internal submit — does the actual work. Used by both the confirm-modal
+  // path and the auto-submit-on-timeout path.
+  async function doSubmit() {
     if (submitting) return;
     if (!attemptId) return;
-    if (!auto && t && !window.confirm(t.ui.submit_confirm)) return;
 
     setSubmitting(true);
     setSubmitErr(null);
 
     try {
+      // Final pass: persist any answers the autosave debounce hasn't flushed yet.
       for (const q of orderedQuestions) {
         const resp = responses[q.id];
         if (resp !== undefined) {
@@ -103,6 +108,8 @@ export default function TestPage() {
         }
       }
 
+      // Submit the attempt. The server now responds quickly (just MCQ scoring
+      // + DB write), and AI grading runs in the background via waitUntil().
       const res = await fetch('/api/submit-attempt', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -123,6 +130,12 @@ export default function TestPage() {
       setSubmitErr(t?.ui.error ?? 'Error');
       setSubmitting(false);
     }
+  }
+
+  // User-initiated submit — opens the confirmation modal.
+  function handleSubmitClick() {
+    if (submitting) return;
+    setShowConfirm(true);
   }
 
   if (!attemptId || !attemptState) {
@@ -168,7 +181,7 @@ export default function TestPage() {
             </div>
           </div>
           <button
-            onClick={() => handleSubmit()}
+            onClick={handleSubmitClick}
             className="btn-outline text-xs"
             disabled={submitting}
           >
@@ -207,7 +220,7 @@ export default function TestPage() {
 
             {isLast ? (
               <button
-                onClick={() => handleSubmit()}
+                onClick={handleSubmitClick}
                 className="btn-primary"
                 disabled={submitting}
               >
@@ -250,6 +263,19 @@ export default function TestPage() {
           })}
         </div>
       </main>
+
+      <ConfirmModal
+        open={showConfirm}
+        title={t.ui.submit}
+        description={t.ui.submit_confirm}
+        confirmLabel={t.ui.submit}
+        cancelLabel={t.ui.prev}
+        onConfirm={() => {
+          setShowConfirm(false);
+          doSubmit();
+        }}
+        onCancel={() => setShowConfirm(false)}
+      />
     </div>
   );
 }
